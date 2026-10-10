@@ -3,19 +3,18 @@
   "builds": [
     {
       "src": "api/index.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "50mb",
+        "includeFiles": [
+          "fashion_boutique_fixed_location.csv",
+          "templates/**",
+          "static/**",
+          "data/final_evaluation/**"
+        ]
+      }
     }
   ],
-  "functions": {
-    "api/index.py": {
-      "includeFiles": [
-        "fashion_boutique_fixed_location.csv",
-        "templates/**",
-        "static/**",
-        "data/final_evaluation/**"
-      ]
-    }
-  },
   "routes": [
     {
       "src": "/(.*)",
