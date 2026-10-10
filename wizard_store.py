@@ -4,10 +4,9 @@ from __future__ import annotations
 
 import json
 import uuid
-from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Iterator
+from typing import Any
 
 from database import Database
 
@@ -23,40 +22,8 @@ class WizardStore:
     ):
         self.database = Database(database_path, database_url)
         self.ttl_seconds = ttl_seconds
-        self._initialize()
-
-    def _connect(self) -> Any:
-        return self.database.connect()
-
-    @contextmanager
-    def _connection(self) -> Iterator[Any]:
-        connection = self._connect()
-        try:
-            yield connection
-            connection.commit()
-        except Exception:
-            connection.rollback()
-            raise
-        finally:
-            connection.close()
-
-    def _initialize(self) -> None:
-        with self._connection() as connection:
-            self.database.execute(
-                connection,
-                """
-                CREATE TABLE IF NOT EXISTS fashion_wizard_sessions (
-                    session_id TEXT PRIMARY KEY,
-                    state_json TEXT NOT NULL,
-                    updated_at REAL NOT NULL
-                )
-                """
-            )
-            self.database.execute(
-                connection,
-                "DELETE FROM fashion_wizard_sessions WHERE updated_at < ?",
-                (datetime.now(timezone.utc).timestamp() - self.ttl_seconds,),
-            )
+        self.database.migrate()
+        self._delete_expired()
 
     @staticmethod
     def _normalize_id(session_id: str) -> str:
@@ -64,6 +31,15 @@ class WizardStore:
             return str(uuid.UUID(str(session_id)))
         except (ValueError, TypeError, AttributeError) as error:
             raise ValueError("Wizard session identifier is invalid") from error
+
+    def _delete_expired(self) -> None:
+        cutoff = datetime.now(timezone.utc).timestamp() - self.ttl_seconds
+        with self.database.connection() as connection:
+            self.database.execute(
+                connection,
+                "DELETE FROM fashion_wizard_sessions WHERE updated_at < ?",
+                (cutoff,),
+            )
 
     def create(self) -> str:
         session_id = str(uuid.uuid4())
@@ -74,7 +50,7 @@ class WizardStore:
         normalized_id = self._normalize_id(session_id)
         state_json = json.dumps(state, sort_keys=True, allow_nan=False)
         updated_at = datetime.now(timezone.utc).timestamp()
-        with self._connection() as connection:
+        with self.database.connection() as connection:
             self.database.execute(
                 connection,
                 "DELETE FROM fashion_wizard_sessions WHERE updated_at < ?",
@@ -94,7 +70,7 @@ class WizardStore:
 
     def get(self, session_id: str) -> dict[str, Any] | None:
         normalized_id = self._normalize_id(session_id)
-        with self._connection() as connection:
+        with self.database.connection() as connection:
             row = self.database.execute(
                 connection,
                 "SELECT state_json, updated_at FROM fashion_wizard_sessions WHERE session_id = ?",
@@ -115,7 +91,7 @@ class WizardStore:
 
     def delete(self, session_id: str) -> None:
         normalized_id = self._normalize_id(session_id)
-        with self._connection() as connection:
+        with self.database.connection() as connection:
             self.database.execute(
                 connection,
                 "DELETE FROM fashion_wizard_sessions WHERE session_id = ?",

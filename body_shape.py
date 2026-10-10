@@ -219,8 +219,8 @@ class BodyShapeEstimator:
             import mediapipe as mp
         except ImportError as error:
             raise BodyShapeUnavailable(
-                "Body-shape estimation needs MediaPipe and OpenCV. Install project "
-                "requirements, then restart the app."
+                "Body-shape estimation needs the optional MediaPipe and OpenCV "
+                "dependencies. Install requirements-full.txt, then restart the app."
             ) from error
 
         encoded = np.frombuffer(image_bytes, dtype=np.uint8)

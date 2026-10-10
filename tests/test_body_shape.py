@@ -1,6 +1,7 @@
 import unittest
 import cv2
 from types import SimpleNamespace
+from unittest.mock import patch
 
 import numpy as np
 
@@ -8,6 +9,7 @@ from body_shape import (
     BODY_SHAPE_LABELS,
     BodyShapeError,
     BodyShapeEstimator,
+    BodyShapeUnavailable,
     classify_styling_shape,
     measure_pose,
 )
@@ -28,6 +30,14 @@ def synthetic_landmarks(shoulder_width=0.30, hip_width=0.20):
 
 
 class BodyShapeMeasurementTests(unittest.TestCase):
+    @patch.dict("sys.modules", {"cv2": None, "mediapipe": None})
+    def test_missing_optional_vision_dependencies_are_reported_cleanly(self):
+        with self.assertRaisesRegex(
+            BodyShapeUnavailable,
+            "optional MediaPipe and OpenCV",
+        ):
+            BodyShapeEstimator().estimate(b"image bytes")
+
     def test_normalized_proportions_and_optional_waist_proxy(self):
         mask = np.zeros((200, 100), dtype=np.float32)
         mask[:, 35:66] = 1.0

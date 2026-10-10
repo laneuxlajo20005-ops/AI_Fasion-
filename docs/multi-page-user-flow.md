@@ -21,10 +21,19 @@ guided flow.
 
 The browser's signed Flask cookie contains only a random wizard-session UUID.
 The corresponding personal details, normalized preferences, body-shape proxy,
-weather result, and recommendation list are stored in the existing local SQLite
-database in a separate `fashion_wizard_sessions` table. Wizard records expire
-after 24 hours; expired records are removed during database initialization,
-state reads, and state writes. Start Over deletes the current record.
+weather result, and recommendation list are stored in a `fashion_wizard_sessions`
+table. Local development uses SQLite; production uses PostgreSQL. Wizard
+records expire after 24 hours; expired records are removed during database
+initialization, state reads, and state writes. Start Over deletes the current
+record.
+
+When `DATABASE_URL` is set, both `fashion_wizard_sessions` and named
+`fashion_profiles` use PostgreSQL instead. Production requires this variable
+and never falls back to SQLite. The schema is initialized using versioned,
+transactional migrations. Local development and isolated tests may use SQLite.
+The Vercel runtime requirements omit optional MediaPipe/OpenCV packages to fit
+the serverless bundle limit; image analysis remains optional and unavailable
+there. Install `requirements-full.txt` for the full local computer-vision flow.
 
 The wizard does not ask for age, height, or body measurements. Display name is
 optional and is only used in page copy. Gender and city are required because the

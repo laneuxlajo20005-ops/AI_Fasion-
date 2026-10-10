@@ -13,6 +13,7 @@ import pandas as pd
 from recommendation_engine import FashionRecommendationEngine
 from fashion_preprocessing import validate_and_normalize
 from context_processor import WeatherService
+from database import DatabaseUnavailable, database_url_from_environment
 from profile_store import ProfileStore
 from wizard_store import WizardStore
 from body_shape import (
@@ -22,9 +23,20 @@ from body_shape import (
     BodyShapeUnavailable,
 )
 
+IS_PRODUCTION = (
+    os.environ.get("VERCEL") == "1"
+    or os.environ.get("APP_ENV", "").strip().lower() == "production"
+)
+DATABASE_URL = database_url_from_environment()
+FLASK_SECRET_KEY = os.environ.get("FLASK_SECRET_KEY", "").strip() or None
+if IS_PRODUCTION and not FLASK_SECRET_KEY:
+    raise RuntimeError(
+        "FLASK_SECRET_KEY is required in production to preserve signed sessions."
+    )
+
 app = Flask(__name__)
 app.config.update(
-    SECRET_KEY=os.environ.get("FLASK_SECRET_KEY") or secrets.token_hex(32),
+    SECRET_KEY=FLASK_SECRET_KEY or secrets.token_hex(32),
     MAX_CONTENT_LENGTH=8 * 1024 * 1024,
     SESSION_COOKIE_HTTPONLY=True,
     SESSION_COOKIE_SAMESITE="Lax",
@@ -47,11 +59,19 @@ recommendation_engine = (
 )
 weather_service = WeatherService()
 DATABASE_PATH = Path(__file__).resolve().parent / "instance" / "fashion_profiles.sqlite3"
-DATABASE_URL = os.environ.get("DATABASE_URL")
 profile_store = ProfileStore(DATABASE_PATH, database_url=DATABASE_URL)
 wizard_store = WizardStore(DATABASE_PATH, database_url=DATABASE_URL)
 body_shape_estimator = BodyShapeEstimator()
 ALLOWED_IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp"}
+
+
+@app.errorhandler(DatabaseUnavailable)
+def database_unavailable(_error):
+    message = "The persistent database is temporarily unavailable. Please retry shortly."
+    app.logger.error("A database operation failed; returning HTTP 503.")
+    if request.path.startswith("/api/"):
+        return jsonify(error=message), 503
+    return render_template("service_unavailable.html", message=message), 503
 
 
 @app.before_request

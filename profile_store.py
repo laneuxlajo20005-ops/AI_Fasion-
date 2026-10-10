@@ -1,13 +1,12 @@
-"""SQLite persistence for lightweight, anonymous fashion preference profiles."""
+"""Persistent storage for lightweight, anonymous fashion preference profiles."""
 
 from __future__ import annotations
 
 import json
 import uuid
-from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Iterator
+from typing import Any
 
 from database import Database
 
@@ -17,37 +16,7 @@ class ProfileStore:
 
     def __init__(self, database_path: Path, database_url: str | None = None):
         self.database = Database(database_path, database_url)
-        self._initialize()
-
-    def _connect(self) -> Any:
-        return self.database.connect()
-
-    @contextmanager
-    def _connection(self) -> Iterator[Any]:
-        connection = self._connect()
-        try:
-            yield connection
-            connection.commit()
-        except Exception:
-            connection.rollback()
-            raise
-        finally:
-            connection.close()
-
-    def _initialize(self) -> None:
-        with self._connection() as connection:
-            self.database.execute(
-                connection,
-                """
-                CREATE TABLE IF NOT EXISTS fashion_profiles (
-                    profile_id TEXT PRIMARY KEY,
-                    profile_name TEXT NOT NULL,
-                    preferences_json TEXT NOT NULL,
-                    created_at TEXT NOT NULL,
-                    updated_at TEXT NOT NULL
-                )
-                """
-            )
+        self.database.migrate()
 
     @staticmethod
     def _normalize_id(profile_id: str) -> str:
@@ -70,7 +39,7 @@ class ProfileStore:
             raise ValueError("Profile name must be 60 characters or fewer")
         timestamp = datetime.now(timezone.utc).isoformat()
         preferences_json = json.dumps(preferences, sort_keys=True, allow_nan=False)
-        with self._connection() as connection:
+        with self.database.connection() as connection:
             self.database.execute(
                 connection,
                 """
@@ -93,7 +62,7 @@ class ProfileStore:
 
     def get(self, profile_id: str) -> dict[str, Any] | None:
         normalized_id = self._normalize_id(profile_id)
-        with self._connection() as connection:
+        with self.database.connection() as connection:
             row = self.database.execute(
                 connection,
                 """
