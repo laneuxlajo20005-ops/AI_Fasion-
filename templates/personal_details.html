@@ -1,0 +1,97 @@
+{% extends "wizard_base.html" %}
+{% block title %}AI Fashion Stylist | Personalized Fashion Recommendations{% endblock %}
+{% block body %}
+<section class="card">
+  <header class="hero">
+    <div class="hero-brand-lockup">
+      <img class="hero-brand-logo" src="{{ url_for('static', filename='images/ai-fashion-logo.png') }}" alt="AI Fashion Stylist circular emblem">
+      <div>
+        <p class="eyebrow">Step 1 of 5 · Your profile</p>
+        <h1>AI Fashion Stylist</h1>
+        <p class="hero-tagline">Your personal AI-powered fashion recommendation system.</p>
+      </div>
+    </div>
+    <p>Discover catalog styles tailored to your preferences, body-shape styling estimate, location, and live weather when available.</p>
+    <div class="landing-highlights" aria-label="Recommendation signals">
+      <span class="landing-highlight">CONTENT-BASED RANKING</span>
+      <span class="landing-highlight">WEATHER CONTEXT</span>
+      <span class="landing-highlight">OPTIONAL POSE ANALYSIS</span>
+    </div>
+  </header>
+  <div class="content">
+    <h2 class="section-title">Personal details</h2>
+    <p class="section-hint">Your city is used to request current weather. If live weather is unavailable, recommendations still work.</p>
+    {% if error %}<div class="error" role="alert">{{ error }}</div>{% endif %}
+    <form method="post" action="{{ url_for('personal_details') }}">
+      <div class="form-grid">
+        <div class="field">
+          <label for="name">Name <span style="font-weight:400;color:#879188">(optional)</span></label>
+          <input id="name" name="name" type="text" maxlength="60" autocomplete="given-name" value="{{ values.get('name','') }}" placeholder="How should we address you?">
+          <p class="hint">Used only for the on-screen greeting.</p>
+        </div>
+        <div class="field">
+          <label for="gender">Gender preference <span aria-hidden="true">*</span></label>
+          <select id="gender" name="gender" required>
+            <option value="">Choose a catalog preference</option>
+            {% for value in options.genders %}
+            <option value="{{ value }}" {% if values.get('gender') == value %}selected{% endif %}>{{ value }}</option>
+            {% endfor %}
+          </select>
+          <p class="hint">Used only for catalog compatibility in ranking.</p>
+        </div>
+        <div class="field">
+          <label for="city">City <span aria-hidden="true">*</span></label>
+          <input id="city" name="city" type="text" maxlength="100" autocomplete="address-level2" required value="{{ values.get('city','') }}" placeholder="e.g. Chennai">
+          <p class="hint">Sent to Open-Meteo to look up weather; the city is not used as a catalog location.</p>
+        </div>
+        <div class="field">
+          <label for="catalog_location">Catalog location <span style="font-weight:400;color:#879188">(optional)</span></label>
+          <select id="catalog_location" name="catalog_location">
+            <option value="">No location preference</option>
+            {% for value in options.locations %}
+            <option value="{{ value }}" {% if values.get('catalog_location') == value %}selected{% endif %}>{{ value }}</option>
+            {% endfor %}
+          </select>
+          <p class="hint">Matches the Urban/Rural location labels available in the product dataset.</p>
+        </div>
+      </div>
+      <p id="saved-profile-status" class="hint" role="status" aria-live="polite">An existing saved profile from this browser can be loaded here.</p>
+      <div class="actions end">
+        <button class="button primary" type="submit">Next: fashion preferences <span aria-hidden="true">→</span></button>
+      </div>
+    </form>
+    <p class="footer-note">No account or authentication is required. Workflow details are stored server-side in this local demonstration and expire after 24 hours.</p>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+(() => {
+  const gender = document.getElementById("gender");
+  const city = document.getElementById("city");
+  const location = document.getElementById("catalog_location");
+  const status = document.getElementById("saved-profile-status");
+  const profileState = {{ {'gender': values.get('gender'), 'city': values.get('city'), 'catalog_location': values.get('catalog_location')}|tojson }};
+  if (profileState.gender || profileState.city || profileState.catalog_location) return;
+  try {
+    const profileId = localStorage.getItem("fashionRecommendationProfileId");
+    if (!profileId) return;
+    fetch(`/api/profile/${encodeURIComponent(profileId)}`)
+      .then(response => response.status === 404 ? null : response.ok ? response.json() : Promise.reject(new Error("Saved profile could not be loaded.")))
+      .then(profile => {
+        if (!profile) return;
+        const preferences = profile.preferences || {};
+        gender.value = preferences.gender || "";
+        city.value = preferences.weather_location || "";
+        location.value = preferences.location || "";
+        status.textContent = "Saved profile loaded. Review these details before continuing.";
+      })
+      .catch(() => {
+        status.textContent = "The saved profile could not be loaded. You can enter your details manually.";
+      });
+  } catch (_error) {
+    status.textContent = "Browser storage is unavailable. You can enter your details manually.";
+  }
+})();
+</script>
+{% endblock %}

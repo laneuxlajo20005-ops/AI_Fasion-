@@ -1,0 +1,64 @@
+{% extends "wizard_base.html" %}
+{% block title %}AI Fashion Stylist | Personalized Fashion Recommendations{% endblock %}
+{% block body %}
+<section class="card">
+  <header class="hero">
+    <p class="eyebrow">Step 4 of 5 · Analysis complete</p>
+    <h1>{% if personal.get('name') %}{{ personal.get('name') }}, your{% else %}Your{% endif %} fashion analysis</h1>
+    <p>The following summary reflects the information received and the ranking completed for this session.</p>
+  </header>
+  <div class="content">
+    <h2 class="section-title">Your recommendation context</h2>
+    <p class="section-hint">No artificial wait is added. Recommendations are ranked when this analysis page is prepared.</p>
+    <div class="summary-grid">
+      <div class="summary-item"><div class="summary-label">Profile</div><div class="summary-value">{{ personal.get('gender') }} · {{ personal.get('city') }}{% if personal.get('catalog_location') %} · {{ personal.get('catalog_location') }} catalog{% endif %}</div></div>
+      <div class="summary-item"><div class="summary-label">Season</div><div class="summary-value">{{ preferences.get('season') or 'Not specified' }}</div></div>
+      <div class="summary-item"><div class="summary-label">Style</div><div class="summary-value">{{ (preferences.get('preferred_styles') or [])|join(', ') or 'No style preference selected' }}</div></div>
+      <div class="summary-item"><div class="summary-label">Categories</div><div class="summary-value">{{ (preferences.get('preferred_categories') or [])|join(', ') or 'No category preference selected' }}</div></div>
+      <div class="summary-item"><div class="summary-label">Colors and brands</div><div class="summary-value">{{ (preferences.get('preferred_colors') or [])|join(', ') or 'Any color' }} · {{ (preferences.get('preferred_brands') or [])|join(', ') or 'Any brand' }}</div></div>
+      <div class="summary-item"><div class="summary-label">Budget</div><div class="summary-value">{% if preferences.get('max_budget') is not none %}Maximum {{ '%.2f'|format(preferences.get('max_budget')) }} catalog price units{% else %}No maximum set{% endif %}</div></div>
+      <div class="summary-item"><div class="summary-label">Body styling estimate</div><div class="summary-value">{% if body_estimate %}Estimated: {{ body_estimate.get('category') }}{% else %}Skipped; no image estimate used{% endif %}</div></div>
+      <div class="summary-item"><div class="summary-label">Ranking</div><div class="summary-value">{{ recommendations|length }} in-stock catalog products ranked</div></div>
+    </div>
+
+    {% if weather_context %}
+    <div class="weather-box">
+      <strong>Current weather checked</strong><br>
+      {{ weather_context.city }}{% if weather_context.country %}, {{ weather_context.country }}{% endif %} ·
+      {{ '%.1f'|format(weather_context.temperature_c) }} °C ·
+      {{ weather_context.humidity_percent }}% humidity · {{ weather_context.weather_condition }}
+      {% if weather_cached %}<span> · cached result</span>{% endif %}
+      <p class="hint">Weather adjusts the transparent ranking score. Weather-resistant fabrics are not asserted because the catalog does not identify fabric or waterproof properties.</p>
+    </div>
+    {% elif weather_message %}
+    <div class="weather-box" role="status"><strong>Live weather unavailable.</strong><br>{{ weather_message }}</div>
+    {% endif %}
+
+    <h2 class="section-title" style="margin-top:27px">Completed pipeline steps</h2>
+    <ul class="check-list">
+      <li><span class="check" aria-hidden="true">✓</span><span>Profile validated: gender compatibility{% if personal.get('catalog_location') %} and catalog location{% endif %}.</span></li>
+      <li><span class="check" aria-hidden="true">✓</span><span>Fashion preference inputs validated{% if preferences.get('preferred_categories') or preferences.get('preferred_colors') or preferences.get('preferred_brands') or preferences.get('preferred_styles') %} and used in content/profile ranking{% else %}; no category, color, brand, or style filters were selected{% endif %}.</span></li>
+      {% if weather_context %}
+      <li><span class="check" aria-hidden="true">✓</span><span>Live weather context incorporated into the recommendation score.</span></li>
+      {% else %}
+      <li><span class="check" aria-hidden="true">✓</span><span>Weather lookup completed; no live weather score was applied{% if preferences.get('season') %}. Season preference remains available{% endif %}.</span></li>
+      {% endif %}
+      {% if body_estimate %}
+      <li><span class="check" aria-hidden="true">✓</span><span>Optional pose estimate completed: {{ body_estimate.get('category') }} styling proxy.</span></li>
+      {% else %}
+      <li><span class="check" aria-hidden="true">✓</span><span>Optional photo analysis skipped; recommendations do not depend on an image.</span></li>
+      {% endif %}
+      {% if recommendations %}
+      <li><span class="check" aria-hidden="true">✓</span><span>{{ recommendations|length }} products ranked with the existing content-based scoring engine.</span></li>
+      {% else %}
+      <li><span class="check" aria-hidden="true">! </span><span>No in-stock catalog items were available to rank.</span></li>
+      {% endif %}
+    </ul>
+    {% if recommendation_fallback %}<div class="notice" role="status" style="margin-top:18px">{{ recommendation_fallback }}</div>{% endif %}
+    <div class="actions">
+      <a class="button secondary" href="{{ url_for('photo_analysis') }}"><span aria-hidden="true">←</span> Back</a>
+      <a class="button primary" href="{{ url_for('recommendations') }}">View my recommendations <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "wizard_base.html" %}
+{% block title %}AI Fashion Stylist | Personalized Fashion Recommendations{% endblock %}
+{% block body %}
+<section class="card home-page">
+  <header class="hero home-hero">
+    <div class="hero-brand-lockup">
+      <img class="hero-brand-logo" src="{{ url_for('static', filename='images/ai-fashion-logo.png') }}" alt="AI Fashion Stylist circular logo">
+      <div>
+        <p class="eyebrow">A considered approach to fashion technology</p>
+        <h1>AI FASHION<br>STYLIST</h1>
+        <p class="hero-tagline">Your Personal AI-Powered Fashion Recommendation System</p>
+      </div>
+    </div>
+    <p class="hero-description">Discover catalog styles tailored to your preferences, location and current weather, with an optional pose-based styling estimate.</p>
+    <div class="home-actions">
+      <a class="button primary" href="{{ url_for('personal_details') }}">Get started</a>
+      <a class="button secondary" href="{{ url_for('recommendations') }}">Explore recommendations</a>
+    </div>
+  </header>
+  <section class="home-features">
+    <p class="eyebrow">A personal styling workflow</p>
+    <h2 class="section-title">Fashion decisions, made more personal.</h2>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h3>Personalized recommendations</h3>
+        <p>Ranked catalog products respond to supported profile, category, color, brand, style and budget preferences.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Optional body styling analysis</h3>
+        <p>Pose landmarks produce an experimental styling estimate and proportions—not a medical or objective body-type assessment.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Weather-aware context</h3>
+        <p>When available, current weather from Open-Meteo can contribute to the transparent product ranking. Recommendations remain available if weather lookup fails.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Explainable matching</h3>
+        <p>Recommendation cards expose the weighted score, supporting evidence and available catalog details.</p>
+      </article>
+    </div>
+    <p class="footer-note">This project ranks products from its supplied catalog. The dataset contains no product photographs or user-item interaction history.</p>
+  </section>
+</section>
+{% endblock %}

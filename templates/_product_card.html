@@ -1,0 +1,58 @@
+{% macro product_card(item, filterable=false, item_index=0) -%}
+<article class="product-card{% if filterable %} filterable-product{% endif %}"
+         {% if filterable %}data-category="{{ item.category }}" data-price="{{ item.current_price }}" data-rating="{{ item.customer_rating if item.customer_rating is not none else '' }}" data-score="{{ item.score }}" data-index="{{ item_index }}"{% endif %}>
+  <div class="product-heading">
+    <h3>{{ item.brand }} {{ item.color }} {{ item.category }}</h3>
+    <span class="score">{{ '%.2f'|format(item.score) }}/100</span>
+  </div>
+  <div class="score-track" role="img" aria-label="Weighted relevance score {{ item.score }} out of 100">
+    <span style="width:{{ [item.score, 100]|min }}%"></span>
+  </div>
+  {% set badge_state = namespace(style=false,color=false) %}
+  {% for evidence in item.explanation_evidence %}
+    {% if 'style proxy preference' in evidence %}{% set badge_state.style = true %}{% endif %}
+    {% if 'color preference' in evidence %}{% set badge_state.color = true %}{% endif %}
+  {% endfor %}
+  <div class="product-badges" aria-label="Verified match signals">
+    {% if badge_state.style %}<span class="product-badge">STYLE MATCH</span>{% endif %}
+    {% if badge_state.color %}<span class="product-badge color">COLOR MATCH</span>{% endif %}
+    {% if item.weather_score is not none and item.weather_score >= 75 %}<span class="product-badge weather">WEATHER MATCH</span>{% endif %}
+    {% if item.body_shape_fit is not none and item.body_shape_fit > 0 %}<span class="product-badge body">BODY-SHAPE PROXY</span>{% endif %}
+  </div>
+  <div class="product-meta">
+    <div class="product-price">{{ '%.2f'|format(item.current_price) }} <span style="font-size:11px;font-weight:500">catalog price units</span></div>
+    Original {{ '%.2f'|format(item.original_price) }} ·
+    {{ '%.1f'|format(item.discount_percentage) }}% discount<br>
+    Category: {{ item.category }} · Brand: {{ item.brand }} · Color: {{ item.color }}<br>
+    Season: {{ item.season }} · Gender: {{ item.gender }} · Location: {{ item.location }}<br>
+    Rating: {% if item.customer_rating is not none %}{{ '%.1f'|format(item.customer_rating) }}/5{% else %}Not rated{% endif %}
+    · Stock: {{ item.stock_quantity }}
+    {% if item.weather_score is not none %}<br>Weather-context proxy fit: {{ item.weather_score }}%{% endif %}
+  </div>
+  {% if item.fallback_used %}
+  <p class="hint"><strong>Filter fallback:</strong> minimum rating was relaxed because no in-stock product within budget met the requested threshold.</p>
+  {% endif %}
+  <details>
+    <summary>Why this product was ranked here</summary>
+    {% if item.explanation_evidence %}
+    <ul class="reasons">
+      {% for reason in item.explanation_evidence %}<li>{{ reason }}</li>{% endfor %}
+    </ul>
+    {% else %}
+    <p class="hint">No selected preference matched this catalog item; its position reflects the other active score components.</p>
+    {% endif %}
+    <p class="hint" style="margin-top:11px"><strong>Score contributions</strong></p>
+    <ul class="reasons">
+      {% for factor in item.score_explanations %}
+      <li>{{ factor.name }}: {{ '%.1f'|format(factor.score) }}% component · +{{ '%.2f'|format(factor.contribution_points) }} score points</li>
+      {% endfor %}
+    </ul>
+    {% if item.weather_rationale %}
+    <p class="hint"><strong>Weather context:</strong> {{ item.weather_rationale|join('; ') }}</p>
+    {% endif %}
+    {% if item.eligibility_evidence %}
+    <p class="hint"><strong>Eligibility:</strong> {{ item.eligibility_evidence|join('; ') }}</p>
+    {% endif %}
+  </details>
+</article>
+{%- endmacro %}

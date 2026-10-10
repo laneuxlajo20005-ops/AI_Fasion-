@@ -1,0 +1,169 @@
+{% extends "wizard_base.html" %}
+{% from "_product_card.html" import product_card %}
+{% block title %}AI Fashion Stylist | Personalized Fashion Recommendations{% endblock %}
+{% block body %}
+<section class="card">
+  <div class="content">
+    <div class="dashboard-intro">
+      <div>
+        <p class="eyebrow" style="color:var(--green)">Step 5 of 5 · Ranked catalog</p>
+        <h1>{% if personal.get('name') %}{{ personal.get('name') }}, your{% else %}Your{% endif %} recommendations</h1>
+        <p>Products are ranked by the existing deterministic content, preference, and available context scores.</p>
+      </div>
+      <form class="start-over" method="post" action="{{ url_for('start_over') }}">
+        <button class="button quiet" type="submit">Start over</button>
+      </form>
+    </div>
+
+    {% if recommendation_fallback %}
+    <div class="notice" role="status" style="margin-top:19px"><strong>Budget fallback shown transparently.</strong><br>{{ recommendation_fallback }}</div>
+    {% endif %}
+    {% if weather_context %}
+    <div class="weather-box">
+      <strong>Weather-based context</strong><br>
+      {{ weather_context.city }}{% if weather_context.country %}, {{ weather_context.country }}{% endif %} · {{ '%.1f'|format(weather_context.temperature_c) }} °C · {{ weather_context.humidity_percent }}% humidity · {{ weather_context.weather_condition }}
+      {% if weather_cached %} · Cached{% endif %}
+      <p class="hint">Weather categories are transparent catalog proxies; fabric warmth or water resistance is not available in the dataset.</p>
+    </div>
+    {% elif weather_message %}
+    <div class="weather-box" role="status">{{ weather_message }}</div>
+    {% endif %}
+
+    {% if best_match %}
+    <section class="dashboard-section" aria-labelledby="best-match-title">
+      <span class="best-label">Your best match</span>
+      <h2 id="best-match-title" class="section-title" style="margin-top:4px">Highest-ranked product</h2>
+      <div class="best-match">
+        {{ product_card(best_match) }}
+        <div>
+          <h3>Why it leads your ranking</h3>
+          <ul class="reasons">
+            {% for reason in best_match.explanation_evidence[:5] %}<li>{{ reason }}</li>{% endfor %}
+            {% if not best_match.explanation_evidence %}<li>Its position reflects the active catalog similarity, rating, discount, and context components.</li>{% endif %}
+          </ul>
+          <p class="hint">The score is a weighted relevance score, not a probability of liking or buying the item.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-section" aria-labelledby="ranked-title">
+      <h2 id="ranked-title">Top recommendations</h2>
+      <p>Up to ten real, in-stock catalog products, ordered by the engine's score. Use these controls to filter or reorder this list.</p>
+      <div class="result-tools" aria-label="Filter and sort ranked recommendations">
+        <label>Category
+          <select id="result-category">
+            <option value="">All categories</option>
+            {% for category in products|map(attribute='category')|unique|sort %}<option value="{{ category }}">{{ category }}</option>{% endfor %}
+          </select>
+        </label>
+        <label>Maximum price
+          <input id="result-max-price" type="number" min="0" step="0.01" placeholder="Any catalog price">
+        </label>
+        <label>Minimum rating
+          <select id="result-min-rating">
+            <option value="">Any rating</option><option value="3">3+ stars</option><option value="4">4+ stars</option><option value="4.5">4.5+ stars</option>
+          </select>
+        </label>
+        <label>Sort by
+          <select id="result-sort">
+            <option value="score">Relevance score</option><option value="price">Price: low to high</option><option value="rating">Rating: high to low</option>
+          </select>
+        </label>
+        <span id="result-count" class="result-count" aria-live="polite"></span>
+      </div>
+      <div id="top-products" class="product-grid">
+        {% for item in products %}{{ product_card(item, true, loop.index0) }}{% endfor %}
+      </div>
+    </section>
+
+    <section class="dashboard-section" aria-labelledby="weather-picks-title">
+      <h2 id="weather-picks-title">Weather-based picks</h2>
+      <p>Ranked recommendations with an actual weather-context score; the highest weather-fit scores are shown first.</p>
+      {% if weather_picks %}
+      <div class="product-grid">{% for item in weather_picks %}{{ product_card(item) }}{% endfor %}</div>
+      {% else %}
+      <div class="empty">No live weather score was available for this run. Season and other selected preferences can still influence the ranked list.</div>
+      {% endif %}
+    </section>
+
+    <section class="dashboard-section" aria-labelledby="preference-picks-title">
+      <h2 id="preference-picks-title">Preference matches</h2>
+      <p>Products with non-zero fit to the category, color, brand, style, or preferred-price choices you selected.</p>
+      {% if preference_picks %}
+      <div class="product-grid">{% for item in preference_picks %}{{ product_card(item) }}{% endfor %}</div>
+      {% else %}
+      <div class="empty">No explicit product preference was selected, or none of the returned products has a positive profile-fit score.</div>
+      {% endif %}
+    </section>
+
+    <section class="dashboard-section" aria-labelledby="alternative-title">
+      <h2 id="alternative-title">Other ranked alternatives</h2>
+      <p>Products in a category different from your chosen categories (or the best match category when no category was specified), while remaining in the engine's ranked results.</p>
+      {% if alternatives %}
+      <div class="product-grid">{% for item in alternatives %}{{ product_card(item) }}{% endfor %}</div>
+      {% else %}
+      <div class="empty">No different-category alternative appeared in the current top-ranked set.</div>
+      {% endif %}
+    </section>
+
+    <section class="dashboard-section" aria-labelledby="budget-title">
+      <h2 id="budget-title">Budget-friendly picks</h2>
+      <p>{% if preferences.get('max_budget') is not none %}Lowest-priced results within your maximum budget, sorted by price.{% else %}Lowest-priced products in the ranked set, sorted by price.{% endif %}</p>
+      {% if budget_picks %}
+      <div class="product-grid">{% for item in budget_picks %}{{ product_card(item) }}{% endfor %}</div>
+      {% else %}
+      <div class="empty">No returned recommendations are within your maximum budget. The separately labeled fallback alternatives may be above that amount.</div>
+      {% endif %}
+    </section>
+    {% else %}
+    <section class="dashboard-section">
+      <h2>No matching catalog items</h2>
+      <div class="empty">The catalog has no in-stock products available to rank. Try changing your budget or start a new session later.</div>
+    </section>
+    {% endif %}
+    <div class="actions">
+      <a class="button secondary" href="{{ url_for('ai_analysis') }}"><span aria-hidden="true">←</span> Back to analysis</a>
+      <form method="post" action="{{ url_for('start_over') }}"><button class="button primary" type="submit">Start over</button></form>
+    </div>
+    <p class="footer-note">Catalog images are not present in the current dataset, so the interface does not fabricate product imagery. Scores and evidence come from the active recommendation engine.</p>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+(() => {
+  const grid = document.getElementById("top-products");
+  if (!grid) return;
+  const cards = Array.from(grid.querySelectorAll(".filterable-product"));
+  const category = document.getElementById("result-category");
+  const maxPrice = document.getElementById("result-max-price");
+  const minRating = document.getElementById("result-min-rating");
+  const sortBy = document.getElementById("result-sort");
+  const count = document.getElementById("result-count");
+  function updateResults() {
+    const priceLimit = Number(maxPrice.value);
+    const ratingLimit = Number(minRating.value);
+    const visible = cards.filter(card => {
+      const matchCategory = !category.value || card.dataset.category === category.value;
+      const matchPrice = !maxPrice.value || Number(card.dataset.price) <= priceLimit;
+      const matchRating = !minRating.value ||
+        (card.dataset.rating !== "" && Number(card.dataset.rating) >= ratingLimit);
+      card.hidden = !(matchCategory && matchPrice && matchRating);
+      return !card.hidden;
+    });
+    visible.sort((a, b) => {
+      if (sortBy.value === "price") return Number(a.dataset.price) - Number(b.dataset.price);
+      if (sortBy.value === "rating") return Number(b.dataset.rating || -1) - Number(a.dataset.rating || -1);
+      return Number(a.dataset.index) - Number(b.dataset.index);
+    });
+    visible.forEach(card => grid.appendChild(card));
+    count.textContent = `Showing ${visible.length} of ${cards.length}`;
+  }
+  [category, maxPrice, minRating, sortBy].forEach(control => {
+    control.addEventListener("input", updateResults);
+    control.addEventListener("change", updateResults);
+  });
+  updateResults();
+})();
+</script>
+{% endblock %}

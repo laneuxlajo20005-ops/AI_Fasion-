@@ -1,0 +1,14 @@
+{% extends "wizard_base.html" %}
+{% block title %}AI Fashion Stylist | Service temporarily unavailable{% endblock %}
+{% block body %}
+<section class="card">
+  <header class="hero">
+    <p class="eyebrow">Catalog unavailable</p>
+    <h1>We can’t prepare recommendations yet.</h1>
+    <p>{{ message }}</p>
+  </header>
+  <div class="content">
+    <p class="section-hint">No recommendation data has been substituted. Restore the project catalog and restart Flask to continue.</p>
+  </div>
+</section>
+{% endblock %}

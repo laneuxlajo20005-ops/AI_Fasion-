@@ -1,0 +1,503 @@
+{
+  "rows": 2176,
+  "columns": 16,
+  "duplicate_rows": 0,
+  "duplicate_product_ids": 0,
+  "dtypes": {
+    "product_id": "string",
+    "category": "string",
+    "brand": "string",
+    "season": "string",
+    "size": "string",
+    "color": "string",
+    "original_price": "float64",
+    "markdown_percentage": "float64",
+    "current_price": "float64",
+    "purchase_date": "datetime64[us]",
+    "stock_quantity": "int64",
+    "customer_rating": "float64",
+    "is_returned": "bool",
+    "return_reason": "string",
+    "gender": "string",
+    "location": "string"
+  },
+  "missing_values": {
+    "product_id": 0,
+    "category": 0,
+    "brand": 0,
+    "season": 0,
+    "size": 491,
+    "color": 0,
+    "original_price": 0,
+    "markdown_percentage": 0,
+    "current_price": 0,
+    "purchase_date": 0,
+    "stock_quantity": 0,
+    "customer_rating": 362,
+    "is_returned": 0,
+    "return_reason": 1856,
+    "gender": 0,
+    "location": 0
+  },
+  "categorical_values": {
+    "category": {
+      "Accessories": 402,
+      "Bottoms": 392,
+      "Shoes": 372,
+      "Tops": 359,
+      "Outerwear": 334,
+      "Dresses": 317
+    },
+    "brand": {
+      "Zara": 313,
+      "Banana Republic": 285,
+      "Mango": 284,
+      "H&M": 283,
+      "Uniqlo": 260,
+      "Ann Taylor": 257,
+      "Forever21": 250,
+      "Gap": 244
+    },
+    "season": {
+      "Summer": 575,
+      "Fall": 544,
+      "Spring": 535,
+      "Winter": 522
+    },
+    "size": {
+      "<NA>": 491,
+      "XS": 301,
+      "S": 294,
+      "XL": 283,
+      "XXL": 279,
+      "L": 273,
+      "M": 255
+    },
+    "color": {
+      "Green": 222,
+      "Black": 216,
+      "Red": 212,
+      "White": 207,
+      "Pink": 204,
+      "Navy": 192,
+      "Blue": 191,
+      "Gray": 189,
+      "Purple": 187,
+      "Brown": 180,
+      "Beige": 176
+    },
+    "is_returned": {
+      "False": 1856,
+      "True": 320
+    },
+    "return_reason": {
+      "<NA>": 1856,
+      "Changed Mind": 68,
+      "Size Issue": 60,
+      "Quality Issue": 55,
+      "Wrong Item": 47,
+      "Color Mismatch": 46,
+      "Damaged": 44
+    },
+    "gender": {
+      "Unisex": 1525,
+      "Men": 334,
+      "Women": 317
+    },
+    "location": {
+      "Rural": 1792,
+      "Urban": 384
+    }
+  },
+  "numeric_summary": {
+    "original_price": {
+      "count": 2176.0,
+      "mean": 97.20034007352942,
+      "std": 51.637345356539235,
+      "min": 15.14,
+      "1%": 19.89,
+      "5%": 28.7875,
+      "25%": 57.8725,
+      "50%": 88.6,
+      "75%": 127.63,
+      "95%": 198.1525,
+      "99%": 235.88,
+      "max": 249.98
+    },
+    "markdown_percentage": {
+      "count": 2176.0,
+      "mean": 12.144715073529412,
+      "std": 18.417785996754002,
+      "min": 0.0,
+      "1%": 0.0,
+      "5%": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 22.424999999999997,
+      "95%": 53.0,
+      "99%": 58.425,
+      "max": 59.9
+    },
+    "current_price": {
+      "count": 2176.0,
+      "mean": 85.4995955882353,
+      "std": 50.091353741463884,
+      "min": 7.29,
+      "1%": 15.37,
+      "5%": 23.357499999999998,
+      "25%": 46.845,
+      "50%": 74.88499999999999,
+      "75%": 112.865,
+      "95%": 183.07500000000002,
+      "99%": 228.965,
+      "max": 249.98
+    },
+    "stock_quantity": {
+      "count": 2176.0,
+      "mean": 24.93795955882353,
+      "std": 14.451386992105816,
+      "min": 0.0,
+      "1%": 0.0,
+      "5%": 2.0,
+      "25%": 13.0,
+      "50%": 25.0,
+      "75%": 37.0,
+      "95%": 47.0,
+      "99%": 50.0,
+      "max": 50.0
+    },
+    "customer_rating": {
+      "count": 1814.0,
+      "mean": 2.986604189636163,
+      "std": 1.159722203125166,
+      "min": 1.0,
+      "1%": 1.0,
+      "5%": 1.2,
+      "25%": 2.0,
+      "50%": 3.0,
+      "75%": 4.0,
+      "95%": 4.8,
+      "99%": 5.0,
+      "max": 5.0
+    }
+  },
+  "iqr_outliers": {
+    "original_price": {
+      "iqr_lower_fence": -46.76374999999999,
+      "iqr_upper_fence": 232.26624999999999,
+      "flagged_count": 26,
+      "note": "Reported only; values are not removed or capped."
+    },
+    "markdown_percentage": {
+      "iqr_lower_fence": -33.637499999999996,
+      "iqr_upper_fence": 56.06249999999999,
+      "flagged_count": 65,
+      "note": "Reported only; values are not removed or capped."
+    },
+    "current_price": {
+      "iqr_lower_fence": -52.185,
+      "iqr_upper_fence": 211.89499999999998,
+      "flagged_count": 48,
+      "note": "Reported only; values are not removed or capped."
+    },
+    "stock_quantity": {
+      "iqr_lower_fence": -23.0,
+      "iqr_upper_fence": 73.0,
+      "flagged_count": 0,
+      "note": "Reported only; values are not removed or capped."
+    },
+    "customer_rating": {
+      "iqr_lower_fence": -1.0,
+      "iqr_upper_fence": 7.0,
+      "flagged_count": 0,
+      "note": "Reported only; values are not removed or capped."
+    }
+  },
+  "date_analysis": {
+    "invalid_dates": 0,
+    "minimum": "2024-08-06T00:00:00",
+    "maximum": "2025-08-06T00:00:00",
+    "month_counts": {
+      "8": 1681,
+      "9": 58,
+      "4": 57,
+      "7": 54,
+      "5": 48,
+      "10": 46,
+      "3": 41,
+      "1": 41,
+      "12": 41,
+      "11": 40,
+      "2": 37,
+      "6": 32
+    },
+    "year_counts": {
+      "2025": 1957,
+      "2024": 219
+    }
+  },
+  "season_analysis": {
+    "counts": {
+      "Summer": 575,
+      "Fall": 544,
+      "Spring": 535,
+      "Winter": 522
+    },
+    "category_by_season": {
+      "Accessories": {
+        "Fall": 101,
+        "Spring": 92,
+        "Summer": 101,
+        "Winter": 108
+      },
+      "Bottoms": {
+        "Fall": 104,
+        "Spring": 93,
+        "Summer": 108,
+        "Winter": 87
+      },
+      "Dresses": {
+        "Fall": 79,
+        "Spring": 76,
+        "Summer": 79,
+        "Winter": 83
+      },
+      "Outerwear": {
+        "Fall": 86,
+        "Spring": 90,
+        "Summer": 83,
+        "Winter": 75
+      },
+      "Shoes": {
+        "Fall": 85,
+        "Spring": 88,
+        "Summer": 108,
+        "Winter": 91
+      },
+      "Tops": {
+        "Fall": 89,
+        "Spring": 96,
+        "Summer": 96,
+        "Winter": 78
+      }
+    }
+  },
+  "gender_analysis": {
+    "counts": {
+      "Unisex": 1525,
+      "Men": 334,
+      "Women": 317
+    },
+    "category_by_gender": {
+      "Accessories": {
+        "Men": 0,
+        "Unisex": 402,
+        "Women": 0
+      },
+      "Bottoms": {
+        "Men": 0,
+        "Unisex": 392,
+        "Women": 0
+      },
+      "Dresses": {
+        "Men": 0,
+        "Unisex": 0,
+        "Women": 317
+      },
+      "Outerwear": {
+        "Men": 334,
+        "Unisex": 0,
+        "Women": 0
+      },
+      "Shoes": {
+        "Men": 0,
+        "Unisex": 372,
+        "Women": 0
+      },
+      "Tops": {
+        "Men": 0,
+        "Unisex": 359,
+        "Women": 0
+      }
+    }
+  },
+  "location_analysis": {
+    "counts": {
+      "Rural": 1792,
+      "Urban": 384
+    },
+    "category_by_location": {
+      "Accessories": {
+        "Rural": 402,
+        "Urban": 0
+      },
+      "Bottoms": {
+        "Rural": 353,
+        "Urban": 39
+      },
+      "Dresses": {
+        "Rural": 236,
+        "Urban": 81
+      },
+      "Outerwear": {
+        "Rural": 214,
+        "Urban": 120
+      },
+      "Shoes": {
+        "Rural": 258,
+        "Urban": 114
+      },
+      "Tops": {
+        "Rural": 329,
+        "Urban": 30
+      }
+    }
+  },
+  "price_analysis": {
+    "original_price_min": 15.14,
+    "original_price_median": 88.6,
+    "original_price_max": 249.98,
+    "current_price_min": 7.29,
+    "current_price_median": 74.88499999999999,
+    "current_price_max": 249.98
+  },
+  "discount_analysis": {
+    "mean_markdown_percentage": 12.144715073529412,
+    "median_markdown_percentage": 0.0,
+    "calculated_discount_amount_median": 0.0,
+    "max_markdown_consistency_error_percentage_points": 0.028329297820818056
+  },
+  "rating_analysis": {
+    "rated_count": 1814,
+    "unrated_count": 362,
+    "mean": 2.986604189636163,
+    "median": 3.0,
+    "min": 1.0,
+    "max": 5.0
+  },
+  "return_analysis": {
+    "returned_count": 320,
+    "not_returned_count": 1856,
+    "return_rate": 0.14705882352941177,
+    "reasons_among_returned": {
+      "Changed Mind": 68,
+      "Size Issue": 60,
+      "Quality Issue": 55,
+      "Wrong Item": 47,
+      "Color Mismatch": 46,
+      "Damaged": 44
+    },
+    "returned_without_reason": 0,
+    "not_returned_with_reason": 0
+  },
+  "stock_analysis": {
+    "zero_stock_count": 43,
+    "stock_level_counts": {
+      "out_of_stock": 43,
+      "low_1_to_10": 417,
+      "medium_11_to_30": 869,
+      "high_over_30": 847
+    }
+  },
+  "validation_checks": {
+    "status": "passed; invalid inputs raise ValueError before output is written",
+    "unexpected_domain_values": {
+      "category": [],
+      "season": [],
+      "gender": [],
+      "location": []
+    },
+    "duplicate_rows": 0,
+    "duplicate_product_ids": 0,
+    "missing_required_values": {
+      "product_id": 0,
+      "category": 0,
+      "brand": 0,
+      "season": 0,
+      "color": 0,
+      "original_price": 0,
+      "markdown_percentage": 0,
+      "current_price": 0,
+      "purchase_date": 0,
+      "stock_quantity": 0,
+      "is_returned": 0,
+      "gender": 0,
+      "location": 0
+    },
+    "invalid_dates": 0,
+    "negative_prices_discounts_or_stock": 0,
+    "markdown_over_100": 0,
+    "current_price_above_original": 0,
+    "rating_outside_1_to_5": 0,
+    "markdown_mismatch_over_0_15_percentage_points": 0
+  },
+  "source_dtypes": {
+    "product_id": "str",
+    "category": "str",
+    "brand": "str",
+    "season": "str",
+    "size": "str",
+    "color": "str",
+    "original_price": "float64",
+    "markdown_percentage": "float64",
+    "current_price": "float64",
+    "purchase_date": "str",
+    "stock_quantity": "int64",
+    "customer_rating": "float64",
+    "is_returned": "bool",
+    "return_reason": "str",
+    "gender": "str",
+    "location": "str"
+  },
+  "split": {
+    "test_size_fraction": 0.2,
+    "random_state": 42,
+    "stratified_by": "category",
+    "train_rows": 1740,
+    "test_rows": 436,
+    "train_category_counts": {
+      "Accessories": 321,
+      "Bottoms": 313,
+      "Shoes": 298,
+      "Tops": 287,
+      "Outerwear": 267,
+      "Dresses": 254
+    },
+    "test_category_counts": {
+      "Accessories": 81,
+      "Bottoms": 79,
+      "Shoes": 74,
+      "Tops": 72,
+      "Outerwear": 67,
+      "Dresses": 63
+    },
+    "train_test_product_id_overlap": 0,
+    "encoded_feature_count": 47,
+    "model_feature_inputs": [
+      "season",
+      "gender",
+      "location",
+      "brand",
+      "color",
+      "size",
+      "price_segment",
+      "stock_level",
+      "original_price",
+      "current_price",
+      "discount_amount",
+      "discount_percentage",
+      "stock_quantity"
+    ],
+    "excluded_from_model_features": [
+      "category (target)",
+      "product_id (identifier)",
+      "purchase_date and derived calendar fields (historical transaction timing)",
+      "customer_rating and rating_category (post-purchase outcome)",
+      "is_returned and return_reason (post-purchase outcome)"
+    ],
+    "price_segment_thresholds_fitted_on_train": {
+      "budget_max_original_price": 67.68333333333334,
+      "mid_range_max_original_price": 112.88666666666663
+    }
+  }
+}

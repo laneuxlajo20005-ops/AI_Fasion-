@@ -1,0 +1,62 @@
+{
+  "evaluation_type": "held_out_catalog_proxy_and_local_latency",
+  "real_user_interaction_data_available": false,
+  "relevance_data_fabricated": false,
+  "weather_and_body_shape_effectiveness_measured": false,
+  "input_file": "fashion_boutique_fixed_location.csv",
+  "source_rows": 2176,
+  "train_rows": 1740,
+  "test_rows": 436,
+  "train_fraction": 0.8,
+  "test_fraction": 0.2,
+  "random_state": 42,
+  "train_test_product_id_overlap": 0,
+  "candidate_count": 1705,
+  "classification_features": [
+    "gender",
+    "location",
+    "season"
+  ],
+  "historical_model_artifact_available": false,
+  "baseline_is_reimplementation_of_audited_design": true,
+  "classification_metrics_averaging": "macro; labels from training split; zero_division=0",
+  "random_forest": {
+    "n_estimators": 100,
+    "random_state": 42,
+    "n_jobs": 1
+  },
+  "ranking_methods": [
+    "Original RF + random selection",
+    "Improved personalized content ranking"
+  ],
+  "ranking_k_values": [
+    5,
+    10
+  ],
+  "relevance_threshold": 4,
+  "graded_relevance_points": {
+    "category": 2,
+    "season": 1,
+    "gender_compatibility": 1,
+    "location": 1,
+    "color": 1,
+    "brand": 1,
+    "size": 1
+  },
+  "ranking_aggregation": "Macro average over held-out product-row pseudo-profiles; F1 computed per profile",
+  "evaluated_profiles": 436,
+  "skipped_profiles": 0,
+  "latency_scope": "Local one-pass in-process inference/ranking after model and engine initialization; no discarded warm-up; excludes HTTP, weather network, SQLite, image processing, MediaPipe, and browser rendering",
+  "latency_profiles": 436,
+  "latency_repetitions": 1,
+  "latency_k": 10,
+  "limitations": [
+    "No user-item interaction history or explicit relevance judgments are present.",
+    "Ranking pseudo-profiles are held-out product rows and are not real users.",
+    "The proxy relevance uses attributes also supplied to the improved recommender, so results are optimistic and not independent.",
+    "The improved ranker is not a category classifier; classification metrics are not applicable to it.",
+    "The catalog contains no weather observations, body-shape labels, or evaluated styling outcomes.",
+    "Latency is machine-, environment-, and catalog-size-specific and excludes external services and application transport.",
+    "One seeded split does not measure uncertainty or prove statistical significance."
+  ]
+}

@@ -1,0 +1,218 @@
+{% extends "wizard_base.html" %}
+{% block title %}AI Fashion Stylist | Personalized Fashion Recommendations{% endblock %}
+{% block body %}
+<section class="card">
+  <header class="hero">
+    <p class="eyebrow">Step 2 of 5 · Your taste</p>
+    <h1>What feels like your style?</h1>
+    <p>Choose as much or as little as you like. Selected preferences influence the existing content-based ranking.</p>
+  </header>
+  <div class="content">
+    <h2 class="section-title">Fashion preferences</h2>
+    <p class="section-hint">Optional choices are safe to leave blank. Budget and minimum rating are eligibility filters where applicable.</p>
+    {% if error %}<div class="error" role="alert">{{ error }}</div>{% endif %}
+    {% set selected_categories = values.get('preferred_categories', []) %}
+    {% set selected_colors = values.get('preferred_colors', []) %}
+    {% set selected_brands = values.get('preferred_brands', []) %}
+    {% set selected_styles = values.get('preferred_styles', []) %}
+    <form method="post" action="{{ url_for('fashion_preferences') }}">
+      <div class="profile-save-panel">
+        <div class="field">
+          <label for="wizard-profile-name">Saved profile name</label>
+          <input id="wizard-profile-name" type="text" maxlength="60" placeholder="My fashion profile">
+        </div>
+        <button class="button secondary" id="save-wizard-profile" type="button">Save profile</button>
+        <p id="wizard-profile-status" class="hint" role="status">Uses your existing anonymous saved profile. No account is required.</p>
+      </div>
+      <div class="form-grid">
+        <div class="field">
+          <label for="season">Preferred season</label>
+          <select id="season" name="season">
+            <option value="">Any season</option>
+            {% for value in options.seasons %}
+            <option value="{{ value }}" {% if values.get('season') == value %}selected{% endif %}>{{ value }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="field">
+          <label for="minimum_rating">Minimum customer rating</label>
+          <select id="minimum_rating" name="minimum_rating">
+            <option value="">Any rating</option>
+            {% for value in [3, 3.5, 4, 4.5, 5] %}
+            <option value="{{ value }}" {% if values.get('minimum_rating')|string == value|string %}selected{% endif %}>{{ value }} / 5 and above</option>
+            {% endfor %}
+          </select>
+          <p class="hint">If no in-budget product meets this threshold, the engine discloses when it relaxes rating only.</p>
+        </div>
+
+        <fieldset class="field full" style="border:0;padding:0;margin:0">
+          <legend>Preferred product categories</legend>
+          <div class="choice-grid">
+            {% for value in options.categories %}
+            <label class="choice"><input type="checkbox" name="preferred_categories" value="{{ value }}" {% if value in selected_categories %}checked{% endif %}><span>{{ value }}</span></label>
+            {% endfor %}
+          </div>
+        </fieldset>
+        <fieldset class="field full" style="border:0;padding:0;margin:0">
+          <legend>Preferred style</legend>
+          <div class="choice-grid">
+            {% for value in options.styles %}
+            <label class="choice"><input type="checkbox" name="preferred_styles" value="{{ value }}" {% if value in selected_styles %}checked{% endif %}><span>{{ value }}</span></label>
+            {% endfor %}
+          </div>
+          <p class="hint">Style labels use the recommendation engine's documented category proxies.</p>
+        </fieldset>
+        <fieldset class="field full" style="border:0;padding:0;margin:0">
+          <legend>Preferred colors</legend>
+          <div class="choice-grid">
+            {% for value in options.colors %}
+            <label class="choice"><input type="checkbox" name="preferred_colors" value="{{ value }}" {% if value in selected_colors %}checked{% endif %}><span>{{ value }}</span></label>
+            {% endfor %}
+          </div>
+        </fieldset>
+        <fieldset class="field full" style="border:0;padding:0;margin:0">
+          <legend>Preferred brands</legend>
+          <div class="choice-grid">
+            {% for value in options.brands %}
+            <label class="choice"><input type="checkbox" name="preferred_brands" value="{{ value }}" {% if value in selected_brands %}checked{% endif %}><span>{{ value }}</span></label>
+            {% endfor %}
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="preferred_price_min">Preferred price from</label>
+          <input id="preferred_price_min" name="preferred_price_min" type="number" min="0" step="0.01" value="{{ values.get('preferred_price_min','') or '' }}" placeholder="No minimum">
+        </div>
+        <div class="field">
+          <label for="preferred_price_max">Preferred price to</label>
+          <input id="preferred_price_max" name="preferred_price_max" type="number" min="0" step="0.01" value="{{ values.get('preferred_price_max','') or '' }}" placeholder="No preferred-range limit">
+        </div>
+        <div class="field">
+          <label for="max_budget">Maximum budget</label>
+          <input id="max_budget" name="max_budget" type="number" min="0" step="0.01" value="{{ values.get('max_budget','') or '' }}" placeholder="No hard maximum">
+          <p class="hint">This is a hard product filter; alternatives above this amount are not silently included.</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="button secondary" href="{{ url_for('personal_details') }}"><span aria-hidden="true">←</span> Back</a>
+        <button class="button primary" type="submit">Next: photo analysis <span aria-hidden="true">→</span></button>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script id="wizard-profile-context" type="application/json">{{ {'personal': personal, 'preferences': preferences}|tojson }}</script>
+<script>
+(() => {
+  const form = document.querySelector('form[action="{{ url_for("fashion_preferences") }}"]');
+  const nameInput = document.getElementById("wizard-profile-name");
+  const status = document.getElementById("wizard-profile-status");
+  const saveButton = document.getElementById("save-wizard-profile");
+  const context = JSON.parse(document.getElementById("wizard-profile-context").textContent);
+  const storageKey = "fashionRecommendationProfileId";
+  let profileId = null;
+
+  function profileIdentifier() {
+    try {
+      profileId = localStorage.getItem(storageKey);
+      if (!profileId) {
+        profileId = crypto.randomUUID();
+        localStorage.setItem(storageKey, profileId);
+      }
+      return profileId;
+    } catch (_error) {
+      status.textContent = "Browser storage is unavailable. You can still use these preferences for this session.";
+      return null;
+    }
+  }
+
+  function hasCurrentPreferences(preferences) {
+    return Boolean(
+      preferences.season ||
+      preferences.preferred_categories?.length ||
+      preferences.preferred_colors?.length ||
+      preferences.preferred_brands?.length ||
+      preferences.preferred_styles?.length ||
+      ["preferred_price_min", "preferred_price_max", "max_budget", "minimum_rating"]
+        .some(name => preferences[name] !== null && preferences[name] !== undefined && preferences[name] !== "")
+    );
+  }
+
+  function applyProfilePreferences(preferences) {
+    for (const name of ["season", "preferred_price_min", "preferred_price_max", "max_budget", "minimum_rating"]) {
+      const field = form.elements[name];
+      if (field && preferences[name] !== null && preferences[name] !== undefined) field.value = preferences[name];
+    }
+    for (const name of ["preferred_categories", "preferred_colors", "preferred_brands", "preferred_styles"]) {
+      const selected = new Set(preferences[name] || []);
+      for (const field of form.querySelectorAll(`input[name="${name}"]`)) field.checked = selected.has(field.value);
+    }
+  }
+
+  function readPreferences() {
+    const values = new FormData(form);
+    return {
+      gender: context.personal.gender,
+      location: context.personal.catalog_location || "",
+      weather_location: context.personal.city || "",
+      season: values.get("season") || "",
+      preferred_categories: values.getAll("preferred_categories"),
+      preferred_colors: values.getAll("preferred_colors"),
+      preferred_brands: values.getAll("preferred_brands"),
+      preferred_styles: values.getAll("preferred_styles"),
+      preferred_price_min: values.get("preferred_price_min") || "",
+      preferred_price_max: values.get("preferred_price_max") || "",
+      max_budget: values.get("max_budget") || "",
+      minimum_rating: values.get("minimum_rating") || "",
+      body_shape: context.preferences.body_shape || ""
+    };
+  }
+
+  async function loadSavedProfile() {
+    const id = profileIdentifier();
+    if (!id) return;
+    try {
+      const response = await fetch(`/api/profile/${encodeURIComponent(id)}`);
+      if (response.status === 404) return;
+      if (!response.ok) throw new Error("Saved profile could not be loaded.");
+      const profile = await response.json();
+      nameInput.value = profile.profile_name || "";
+      if (!hasCurrentPreferences(context.preferences || {})) {
+        applyProfilePreferences(profile.preferences || {});
+      }
+      status.textContent = "Your saved profile was loaded from the existing profile store.";
+    } catch (_error) {
+      status.textContent = "The saved profile could not be loaded. Your current preferences are still available.";
+    }
+  }
+
+  saveButton.addEventListener("click", async () => {
+    const id = profileIdentifier();
+    if (!id) return;
+    saveButton.disabled = true;
+    status.textContent = "Saving your profile…";
+    try {
+      const response = await fetch("{{ url_for('save_profile') }}", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+          profile_id: id,
+          profile_name: nameInput.value,
+          preferences: readPreferences()
+        })
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.error || "Profile could not be saved.");
+      localStorage.setItem(storageKey, result.profile_id);
+      status.textContent = "Profile saved to your existing anonymous profile. It will be available next time on this browser.";
+    } catch (error) {
+      status.textContent = error.message || "Profile could not be saved.";
+    } finally {
+      saveButton.disabled = false;
+    }
+  });
+
+  loadSavedProfile();
+})();
+</script>
+{% endblock %}

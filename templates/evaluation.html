@@ -1,0 +1,82 @@
+{% extends "wizard_base.html" %}
+{% block title %}AI Fashion Stylist | Personalized Fashion Recommendations{% endblock %}
+{% block body %}
+<section class="card">
+  <header class="hero">
+    <p class="eyebrow">Offline experiment · reproducible artifacts</p>
+    <h1>Recommendation evaluation</h1>
+    <p>Results below are loaded from the project's generated evaluation artifacts; they are not live user-performance statistics.</p>
+  </header>
+  <div class="content">
+    {% if evaluation_available %}
+    <div class="notice" role="note">
+      <strong>Simulated catalog-proxy evaluation—not user-interaction evaluation.</strong>
+      The project has no customer-item interaction history. Held-out catalog rows are used as pseudo-profiles, and proxy relevance overlaps attributes used by the recommender. Interpret ranking scores as an offline experiment, not evidence of customer satisfaction.
+    </div>
+    <h2 class="section-title" style="margin-top:24px">Ranking metrics</h2>
+    <p class="section-hint">{{ report.evaluated_profiles }} held-out catalog pseudo-profiles · split seed {{ report.random_state }} · K = {{ report.ranking_k_values|join(', ') }}</p>
+    <div class="metric-table-wrap">
+      <table class="metric-table">
+        <thead><tr><th>Method</th><th>K</th><th>Precision@K</th><th>Recall@K</th><th>F1@K</th><th>NDCG@K</th><th>Hit Rate@K</th></tr></thead>
+        <tbody>
+          {% for row in ranking_metrics %}
+          <tr>
+            <td>{{ row.method }}</td><td>{{ row.k|int }}</td>
+            <td>{{ '%.4f'|format(row.precision_at_k) }}</td>
+            <td>{{ '%.4f'|format(row.recall_at_k) }}</td>
+            <td>{{ '%.4f'|format(row.f1_at_k) }}</td>
+            <td>{{ '%.4f'|format(row.ndcg_at_k) }}</td>
+            <td>{{ '%.4f'|format(row.hit_rate_at_k) }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="section-title">Category-classification baseline</h2>
+    <p class="section-hint">These metrics apply to the re-evaluated Random Forest classifier. The deployed content ranker is not a category classifier.</p>
+    <div class="metric-table-wrap">
+      <table class="metric-table">
+        <thead><tr><th>Model</th><th>Held-out products</th><th>Accuracy</th><th>Macro precision</th><th>Macro recall</th><th>Macro F1</th></tr></thead>
+        <tbody>
+          {% for row in classification_metrics %}
+          <tr>
+            <td>{{ row.model }}</td><td>{{ row.test_products|int }}</td>
+            {% if row.accuracy == row.accuracy %}
+            <td>{{ '%.4f'|format(row.accuracy) }}</td><td>{{ '%.4f'|format(row.macro_precision) }}</td>
+            <td>{{ '%.4f'|format(row.macro_recall) }}</td><td>{{ '%.4f'|format(row.macro_f1) }}</td>
+            {% else %}
+            <td colspan="4">Not applicable to a ranking method</td>
+            {% endif %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="section-title">Local inference timing</h2>
+    <p class="section-hint">In-process timing after engine initialization; excludes HTTP, weather network, SQLite and computer-vision processing.</p>
+    <div class="metric-table-wrap">
+      <table class="metric-table">
+        <thead><tr><th>Method</th><th>Mean (ms)</th><th>Median (ms)</th><th>95th percentile (ms)</th></tr></thead>
+        <tbody>
+          {% for row in response_time_metrics %}
+          <tr><td>{{ row.method }}</td><td>{{ '%.2f'|format(row.mean_ms) }}</td><td>{{ '%.2f'|format(row.median_ms) }}</td><td>{{ '%.2f'|format(row.p95_ms) }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="footer-note">{{ report.test_rows }} held-out products from {{ report.source_rows }} catalog rows. Weather and body-shape effectiveness were not measured.</p>
+    {% else %}
+    <div class="weather-box" role="status">
+      <strong>Evaluation has not yet been executed.</strong>
+      <p>Run <code>python final_evaluation.py</code> from the project folder to generate the comparison artifacts for this page.</p>
+    </div>
+    {% endif %}
+    <div class="actions">
+      <a class="button secondary" href="{{ url_for('about') }}">About the methodology</a>
+      <a class="button primary" href="{{ url_for('personal_details') }}">Try the recommender</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

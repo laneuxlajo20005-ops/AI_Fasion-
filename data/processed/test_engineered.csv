@@ -1,0 +1,437 @@
+product_id,category,brand,season,size,color,original_price,markdown_percentage,current_price,purchase_date,stock_quantity,customer_rating,is_returned,return_reason,gender,location,discount_amount,discount_percentage,price_segment,stock_level,rating_category,purchase_month,purchase_day,purchase_year
+FB001781,Dresses,Ann Taylor,Summer,XL,Brown,102.71,55.9,45.3,2025-08-06,31,4.6,False,,Women,Rural,57.41,55.89523902249051,mid_range,high,high,8,6,2025
+FB001719,Accessories,Ann Taylor,Winter,Unknown,Beige,59.98,0.0,59.98,2025-08-06,28,2.2,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,6,2025
+FB001280,Bottoms,Uniqlo,Summer,S,White,48.68,41.7,28.38,2025-08-06,20,1.3,True,Damaged,Unisex,Rural,20.3,41.70090386195563,budget,medium,low,8,6,2025
+FB001259,Outerwear,Ann Taylor,Fall,XXL,Navy,158.31,0.0,158.31,2025-08-06,7,5.0,False,,Men,Rural,0.0,0.0,premium,low,high,8,6,2025
+FB001051,Dresses,Forever21,Spring,S,Blue,171.1,0.0,171.1,2025-07-23,34,,False,,Women,Rural,0.0,0.0,premium,high,unrated,7,23,2025
+FB000451,Accessories,Mango,Summer,Unknown,Purple,39.85,0.0,39.85,2025-08-06,28,2.4,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,6,2025
+FB001834,Tops,Ann Taylor,Summer,XS,Green,38.9,0.0,38.9,2025-08-06,1,5.0,False,,Unisex,Rural,0.0,0.0,budget,low,high,8,6,2025
+FB001703,Accessories,Forever21,Summer,Unknown,Pink,32.04,0.0,32.04,2025-08-06,41,1.8,False,,Unisex,Rural,0.0,0.0,budget,high,low,8,6,2025
+FB000753,Accessories,Uniqlo,Summer,Unknown,Beige,61.13,0.0,61.13,2025-08-06,34,2.6,False,,Unisex,Rural,0.0,0.0,budget,high,low,8,6,2025
+FB000390,Shoes,Forever21,Summer,L,Pink,79.59,24.3,60.25,2025-08-06,37,1.7,False,,Unisex,Rural,19.340000000000003,24.299535117477074,mid_range,high,low,8,6,2025
+FB001279,Tops,H&M,Spring,XL,Navy,80.54,0.0,80.54,2024-12-10,50,2.1,False,,Unisex,Rural,0.0,0.0,mid_range,high,low,12,10,2024
+FB000356,Shoes,Banana Republic,Summer,XL,Pink,144.61,0.0,144.61,2025-08-06,21,2.5,False,,Unisex,Urban,0.0,0.0,premium,medium,low,8,6,2025
+FB001842,Tops,Zara,Winter,XS,Beige,53.37,0.0,53.37,2025-08-06,15,1.1,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,6,2025
+FB000961,Outerwear,Mango,Summer,S,Blue,101.04,0.0,101.04,2025-08-06,35,3.5,False,,Men,Rural,0.0,0.0,mid_range,high,average,8,6,2025
+FB001109,Tops,Forever21,Spring,M,Red,49.12,0.0,49.12,2025-06-28,47,,False,,Unisex,Rural,0.0,0.0,budget,high,unrated,6,28,2025
+FB000299,Dresses,Gap,Summer,XXL,Red,82.7,0.0,82.7,2025-08-06,20,4.0,False,,Women,Rural,0.0,0.0,mid_range,medium,high,8,6,2025
+FB000740,Tops,Zara,Spring,XL,Red,57.91,0.0,57.91,2025-03-13,33,3.9,False,,Unisex,Rural,0.0,0.0,budget,high,average,3,13,2025
+FB001621,Outerwear,Uniqlo,Fall,XS,White,241.81,0.0,241.81,2025-08-06,38,3.5,False,,Men,Rural,0.0,0.0,premium,high,average,8,6,2025
+FB000577,Outerwear,H&M,Fall,XXL,White,246.49,0.0,246.49,2025-08-06,20,4.8,False,,Men,Urban,0.0,0.0,premium,medium,high,8,6,2025
+FB000006,Accessories,Zara,Fall,Unknown,White,35.03,35.4,22.63,2025-08-06,38,2.9,True,Color Mismatch,Unisex,Rural,12.400000000000002,35.39823008849558,budget,high,low,8,6,2025
+FB001610,Accessories,Gap,Fall,Unknown,Blue,60.48,7.3,56.06,2025-08-06,46,3.6,False,,Unisex,Rural,4.419999999999995,7.308201058201049,budget,high,average,8,6,2025
+FB001484,Accessories,Zara,Fall,Unknown,Green,72.37,0.0,72.37,2025-08-06,24,2.9,False,,Unisex,Rural,0.0,0.0,mid_range,medium,low,8,6,2025
+FB000116,Tops,Zara,Spring,XXL,Brown,49.67,0.0,49.67,2024-09-06,37,2.3,False,,Unisex,Rural,0.0,0.0,budget,high,low,9,6,2024
+FB001676,Dresses,Banana Republic,Fall,Unknown,Brown,126.11,0.0,126.11,2025-08-06,16,3.5,False,,Women,Urban,0.0,0.0,premium,medium,average,8,6,2025
+FB000319,Accessories,Uniqlo,Fall,Unknown,Green,26.03,0.0,26.03,2025-08-06,15,3.8,False,,Unisex,Rural,0.0,0.0,budget,medium,average,8,6,2025
+FB000220,Dresses,Zara,Winter,XXL,Brown,160.6,18.4,131.05,2025-08-06,41,3.0,False,,Women,Urban,29.549999999999983,18.3997509339975,premium,high,average,8,6,2025
+FB001888,Bottoms,Ann Taylor,Winter,S,Beige,75.53,58.1,31.65,2025-08-06,33,4.0,False,,Unisex,Rural,43.88,58.09612074672316,mid_range,high,high,8,6,2025
+FB001981,Bottoms,Forever21,Summer,L,Navy,80.81,0.0,80.81,2025-08-06,15,4.6,False,,Unisex,Rural,0.0,0.0,mid_range,medium,high,8,6,2025
+FB001179,Dresses,Zara,Winter,S,Purple,49.89,0.0,49.89,2025-08-06,0,3.5,True,Wrong Item,Women,Rural,0.0,0.0,budget,out_of_stock,average,8,6,2025
+FB000433,Bottoms,Forever21,Fall,M,Red,72.85,0.0,72.85,2025-08-06,25,3.8,False,,Unisex,Rural,0.0,0.0,mid_range,medium,average,8,6,2025
+FB001133,Outerwear,Uniqlo,Summer,L,Green,170.91,0.0,170.91,2025-08-06,36,1.6,True,Quality Issue,Men,Rural,0.0,0.0,premium,high,low,8,6,2025
+FB001247,Dresses,Uniqlo,Summer,XXL,White,179.9,9.3,163.17,2025-08-06,34,2.1,False,,Women,Rural,16.730000000000018,9.299610894941644,premium,high,low,8,6,2025
+FB001461,Accessories,Gap,Winter,Unknown,Navy,23.2,0.0,23.2,2025-08-06,17,2.1,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,6,2025
+FB000794,Bottoms,Zara,Summer,S,Pink,78.41,20.7,62.18,2025-08-06,9,4.4,False,,Unisex,Rural,16.229999999999997,20.69889044764698,mid_range,low,high,8,6,2025
+FB001774,Tops,Uniqlo,Winter,XL,Navy,91.6,0.0,91.6,2025-08-06,6,2.7,False,,Unisex,Rural,0.0,0.0,mid_range,low,low,8,6,2025
+FB000354,Accessories,Uniqlo,Fall,Unknown,Black,44.58,0.0,44.58,2025-08-06,21,,False,,Unisex,Rural,0.0,0.0,budget,medium,unrated,8,6,2025
+FB002019,Bottoms,Ann Taylor,Winter,M,Brown,84.29,0.0,84.29,2025-08-06,4,2.8,False,,Unisex,Rural,0.0,0.0,mid_range,low,low,8,6,2025
+FB000658,Bottoms,Uniqlo,Summer,S,Red,102.07,0.0,102.07,2025-08-06,26,,True,Color Mismatch,Unisex,Rural,0.0,0.0,mid_range,medium,unrated,8,6,2025
+FB001883,Accessories,Uniqlo,Spring,Unknown,Blue,26.7,0.0,26.7,2025-05-27,48,3.1,False,,Unisex,Rural,0.0,0.0,budget,high,average,5,27,2025
+FB001381,Outerwear,Ann Taylor,Spring,XS,Beige,100.27,0.0,100.27,2025-03-03,37,3.1,False,,Men,Rural,0.0,0.0,mid_range,high,average,3,3,2025
+FB001306,Bottoms,Forever21,Summer,L,Brown,117.64,54.2,53.88,2025-08-06,25,4.6,True,Wrong Item,Unisex,Rural,63.76,54.199251955117305,premium,medium,high,8,6,2025
+FB002070,Shoes,H&M,Spring,XXL,Gray,122.55,11.2,108.82,2024-10-02,23,,False,,Unisex,Urban,13.730000000000004,11.203590371277034,premium,medium,unrated,10,2,2024
+FB000177,Outerwear,Uniqlo,Winter,M,Gray,204.21,0.0,204.21,2025-08-06,5,3.3,False,,Men,Rural,0.0,0.0,premium,low,average,8,6,2025
+FB001237,Bottoms,Zara,Spring,M,Purple,96.76,0.0,96.76,2025-02-26,6,,False,,Unisex,Rural,0.0,0.0,mid_range,low,unrated,2,26,2025
+FB000785,Outerwear,Forever21,Summer,S,Gray,231.52,17.3,191.47,2025-08-06,49,2.1,False,,Men,Rural,40.05000000000001,17.29872149274361,premium,high,low,8,6,2025
+FB001031,Dresses,Ann Taylor,Summer,S,Green,147.58,0.0,147.58,2025-08-06,10,4.3,False,,Women,Rural,0.0,0.0,premium,low,high,8,6,2025
+FB000668,Bottoms,Ann Taylor,Summer,XL,Beige,63.99,42.2,36.99,2025-08-06,35,3.2,False,,Unisex,Rural,27.0,42.19409282700422,budget,high,average,8,6,2025
+FB000008,Dresses,Mango,Winter,XL,Blue,91.55,22.1,71.32,2025-08-06,47,1.6,False,,Women,Rural,20.230000000000004,22.09721463681049,mid_range,high,low,8,6,2025
+FB001881,Accessories,H&M,Winter,Unknown,Green,52.57,0.0,52.57,2025-08-06,50,2.5,True,Damaged,Unisex,Rural,0.0,0.0,budget,high,low,8,6,2025
+FB000562,Shoes,Uniqlo,Spring,L,Black,124.2,0.0,124.2,2024-08-28,24,1.0,False,,Unisex,Rural,0.0,0.0,premium,medium,low,8,28,2024
+FB001735,Dresses,Banana Republic,Spring,XS,White,169.32,0.0,169.32,2024-12-17,19,2.2,False,,Women,Urban,0.0,0.0,premium,medium,low,12,17,2024
+FB000572,Shoes,H&M,Summer,XS,White,98.95,30.3,68.97,2025-08-06,16,,False,,Unisex,Urban,29.980000000000004,30.29813036887317,mid_range,medium,unrated,8,6,2025
+FB000110,Dresses,Zara,Winter,S,Gray,91.0,59.5,36.86,2025-08-06,5,3.9,False,,Women,Rural,54.14,59.494505494505496,mid_range,low,average,8,6,2025
+FB000743,Tops,Forever21,Summer,S,Pink,113.29,34.0,74.77,2025-08-06,10,,False,,Unisex,Rural,38.52000000000001,34.00123576661665,premium,low,unrated,8,6,2025
+FB001836,Outerwear,Zara,Fall,M,Red,158.64,50.2,79.0,2025-08-06,7,3.0,True,Changed Mind,Men,Urban,79.63999999999999,50.20171457387796,premium,low,average,8,6,2025
+FB000370,Accessories,H&M,Fall,Unknown,Red,36.35,37.6,22.68,2025-08-06,49,4.0,True,Changed Mind,Unisex,Rural,13.670000000000002,37.606602475928476,budget,high,high,8,6,2025
+FB001634,Shoes,Uniqlo,Spring,S,Gray,148.24,10.9,132.08,2024-08-27,44,1.3,False,,Unisex,Rural,16.159999999999997,10.901241230437126,premium,high,low,8,27,2024
+FB000367,Outerwear,Banana Republic,Spring,L,White,80.11,0.0,80.11,2025-04-16,34,1.8,False,,Men,Rural,0.0,0.0,mid_range,high,low,4,16,2025
+FB001470,Bottoms,H&M,Winter,S,Red,47.01,0.0,47.01,2025-08-06,17,1.6,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,6,2025
+FB000619,Dresses,Mango,Fall,XL,Green,119.96,0.0,119.96,2025-08-06,5,5.0,False,,Women,Rural,0.0,0.0,premium,low,high,8,6,2025
+FB001351,Outerwear,Ann Taylor,Summer,M,Pink,81.67,0.0,81.67,2025-08-06,34,3.1,True,Damaged,Men,Rural,0.0,0.0,mid_range,high,average,8,6,2025
+FB000970,Outerwear,Banana Republic,Winter,XS,White,222.5,18.7,180.89,2025-08-06,47,,False,,Men,Urban,41.610000000000014,18.701123595505628,premium,high,unrated,8,6,2025
+FB002088,Bottoms,H&M,Fall,S,Blue,30.43,0.0,30.43,2025-08-06,32,3.1,False,,Unisex,Rural,0.0,0.0,budget,high,average,8,6,2025
+FB002153,Accessories,Uniqlo,Spring,Unknown,Brown,15.36,36.8,9.71,2025-04-29,46,2.3,False,,Unisex,Rural,5.649999999999999,36.78385416666666,budget,high,low,4,29,2025
+FB000883,Outerwear,Ann Taylor,Summer,XL,Blue,83.24,0.0,83.24,2025-08-06,16,,False,,Men,Rural,0.0,0.0,mid_range,medium,unrated,8,6,2025
+FB000034,Tops,Banana Republic,Summer,XL,Gray,88.23,0.0,88.23,2025-08-06,44,1.6,False,,Unisex,Rural,0.0,0.0,mid_range,high,low,8,6,2025
+FB001079,Dresses,Mango,Fall,L,Pink,102.04,0.0,102.04,2025-08-06,34,3.4,False,,Women,Rural,0.0,0.0,mid_range,high,average,8,6,2025
+FB001766,Bottoms,Forever21,Fall,XXL,Beige,61.1,0.0,61.1,2025-08-06,30,4.6,False,,Unisex,Rural,0.0,0.0,budget,medium,high,8,6,2025
+FB000946,Accessories,Gap,Fall,Unknown,Blue,21.2,19.0,17.17,2025-08-06,22,1.3,False,,Unisex,Rural,4.029999999999998,19.00943396226414,budget,medium,low,8,6,2025
+FB001218,Shoes,H&M,Summer,XL,Black,127.31,5.4,120.44,2025-08-06,34,2.5,False,,Unisex,Urban,6.8700000000000045,5.39627680465007,premium,high,low,8,6,2025
+FB001463,Accessories,Zara,Summer,Unknown,Black,51.33,0.0,51.33,2025-08-06,25,1.2,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,6,2025
+FB000432,Shoes,Mango,Spring,L,Green,131.25,0.0,131.25,2025-06-18,12,1.6,False,,Unisex,Rural,0.0,0.0,premium,medium,low,6,18,2025
+FB000293,Bottoms,Mango,Fall,M,Blue,69.11,0.0,69.11,2025-08-06,18,3.9,False,,Unisex,Rural,0.0,0.0,mid_range,medium,average,8,6,2025
+FB001962,Outerwear,Uniqlo,Summer,M,Green,216.73,0.0,216.73,2025-08-06,5,2.7,True,Wrong Item,Men,Rural,0.0,0.0,premium,low,low,8,6,2025
+FB001145,Accessories,Zara,Summer,Unknown,Brown,43.61,33.3,29.09,2025-08-06,47,2.5,False,,Unisex,Rural,14.52,33.29511579912864,budget,high,low,8,6,2025
+FB001335,Bottoms,Gap,Summer,L,Red,45.48,0.0,45.48,2025-08-06,29,2.3,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,6,2025
+FB001639,Outerwear,H&M,Fall,M,Beige,209.68,3.6,202.13,2025-08-06,18,4.1,False,,Men,Urban,7.550000000000011,3.600724914154908,premium,medium,high,8,6,2025
+FB001535,Shoes,Banana Republic,Fall,XS,Navy,159.25,28.2,114.34,2025-08-06,1,,True,Wrong Item,Unisex,Urban,44.91,28.20094191522763,premium,low,unrated,8,6,2025
+FB000169,Dresses,Forever21,Fall,XXL,Gray,60.3,21.4,47.4,2025-08-06,4,3.6,False,,Women,Rural,12.899999999999999,21.393034825870643,budget,low,average,8,6,2025
+FB001840,Shoes,Zara,Summer,XL,Red,124.56,0.0,124.56,2025-08-06,18,3.0,False,,Unisex,Urban,0.0,0.0,premium,medium,average,8,6,2025
+FB001856,Bottoms,Mango,Spring,L,Purple,78.09,56.3,34.13,2025-04-23,20,1.3,False,,Unisex,Rural,43.96,56.29401972083493,mid_range,medium,low,4,23,2025
+FB001219,Tops,Ann Taylor,Fall,Unknown,Red,35.74,0.0,35.74,2025-08-06,33,,True,Color Mismatch,Unisex,Rural,0.0,0.0,budget,high,unrated,8,6,2025
+FB000423,Tops,Mango,Fall,M,Beige,97.47,32.0,66.28,2025-08-06,27,3.0,False,,Unisex,Rural,31.189999999999998,31.99958961731815,mid_range,medium,average,8,6,2025
+FB001625,Tops,Zara,Fall,XXL,White,28.23,40.3,16.85,2025-08-06,21,2.7,False,,Unisex,Rural,11.379999999999999,40.31172511512575,budget,medium,low,8,6,2025
+FB001201,Shoes,Mango,Summer,M,Red,187.47,9.6,169.47,2025-08-06,28,4.0,False,,Unisex,Rural,18.0,9.601536245799329,premium,medium,high,8,6,2025
+FB001363,Tops,Banana Republic,Spring,S,Gray,77.3,35.1,50.17,2025-07-26,16,,False,,Unisex,Rural,27.129999999999995,35.09702457956015,mid_range,medium,unrated,7,26,2025
+FB001503,Dresses,H&M,Summer,XS,Purple,100.08,0.0,100.08,2025-08-06,23,4.8,False,,Women,Urban,0.0,0.0,mid_range,medium,high,8,6,2025
+FB002118,Bottoms,Zara,Spring,L,Beige,75.78,0.0,75.78,2025-01-28,12,3.6,False,,Unisex,Rural,0.0,0.0,mid_range,medium,average,1,28,2025
+FB000107,Bottoms,Banana Republic,Summer,M,Beige,38.02,0.0,38.02,2025-08-06,44,4.7,False,,Unisex,Rural,0.0,0.0,budget,high,high,8,6,2025
+FB000786,Outerwear,Gap,Winter,XL,White,140.1,0.0,140.1,2025-08-06,14,3.9,False,,Men,Rural,0.0,0.0,premium,medium,average,8,6,2025
+FB001578,Outerwear,Gap,Summer,XS,Blue,82.91,0.7,82.33,2025-08-06,24,,True,Damaged,Men,Rural,0.5799999999999983,0.6995537329634524,mid_range,medium,unrated,8,6,2025
+FB000600,Outerwear,Mango,Fall,L,Black,132.58,0.0,132.58,2025-08-06,45,1.6,False,,Men,Rural,0.0,0.0,premium,high,low,8,6,2025
+FB001886,Outerwear,Zara,Fall,XS,Red,183.6,0.0,183.6,2025-08-06,10,,False,,Men,Urban,0.0,0.0,premium,low,unrated,8,6,2025
+FB000630,Bottoms,Ann Taylor,Fall,Unknown,Black,47.7,0.0,47.7,2025-08-06,14,2.3,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,6,2025
+FB000843,Outerwear,Uniqlo,Spring,L,Purple,138.89,0.0,138.89,2025-01-30,10,,False,,Men,Rural,0.0,0.0,premium,low,unrated,1,30,2025
+FB001244,Dresses,Zara,Winter,XL,Navy,79.18,21.1,62.47,2025-08-06,36,1.5,True,Changed Mind,Women,Rural,16.710000000000008,21.10381409446831,mid_range,high,low,8,6,2025
+FB000847,Dresses,Banana Republic,Winter,XXL,Navy,107.02,10.6,95.68,2025-08-06,6,,False,,Women,Urban,11.33999999999999,10.59615025228928,mid_range,low,unrated,8,6,2025
+FB001991,Accessories,Uniqlo,Summer,Unknown,Gray,60.18,0.0,60.18,2025-08-06,36,1.4,False,,Unisex,Rural,0.0,0.0,budget,high,low,8,6,2025
+FB001406,Shoes,Mango,Summer,Unknown,Pink,75.95,0.0,75.95,2025-08-06,14,,False,,Unisex,Rural,0.0,0.0,mid_range,medium,unrated,8,6,2025
+FB001702,Tops,H&M,Spring,M,Beige,75.79,7.1,70.41,2025-03-29,13,3.3,False,,Unisex,Rural,5.38000000000001,7.098561815542959,mid_range,medium,average,3,29,2025
+FB000760,Dresses,Forever21,Summer,S,Black,126.37,0.0,126.37,2025-08-06,42,2.0,False,,Women,Rural,0.0,0.0,premium,high,low,8,6,2025
+FB001524,Shoes,Banana Republic,Winter,L,Pink,142.71,0.0,142.71,2025-08-06,28,1.0,False,,Unisex,Urban,0.0,0.0,premium,medium,low,8,6,2025
+FB000640,Bottoms,Banana Republic,Winter,XS,Pink,70.83,18.0,58.08,2025-08-06,21,2.9,False,,Unisex,Rural,12.75,18.000847098686997,mid_range,medium,low,8,6,2025
+FB001752,Tops,Uniqlo,Spring,M,Purple,104.75,0.0,104.75,2024-10-26,11,,False,,Unisex,Rural,0.0,0.0,mid_range,medium,unrated,10,26,2024
+FB000005,Tops,Banana Republic,Winter,XL,Black,105.02,0.0,105.02,2025-08-06,10,,False,,Unisex,Urban,0.0,0.0,mid_range,low,unrated,8,6,2025
+FB000327,Bottoms,Forever21,Winter,S,Black,106.53,46.5,56.99,2025-08-06,17,,False,,Unisex,Rural,49.54,46.50333239463062,mid_range,medium,unrated,8,6,2025
+FB001933,Shoes,Uniqlo,Winter,XXL,Green,102.95,0.0,102.95,2025-08-06,38,3.8,False,,Unisex,Rural,0.0,0.0,mid_range,high,average,8,6,2025
+FB001544,Shoes,H&M,Fall,Unknown,Brown,172.27,14.9,146.6,2025-08-06,8,3.7,False,,Unisex,Urban,25.670000000000016,14.901027456899063,premium,low,average,8,6,2025
+FB001491,Shoes,Gap,Winter,XS,Brown,86.89,19.5,69.95,2025-08-06,49,1.3,False,,Unisex,Rural,16.939999999999998,19.495914374496486,mid_range,high,low,8,6,2025
+FB000224,Outerwear,Forever21,Summer,S,Red,206.91,0.0,206.91,2025-08-06,34,2.3,False,,Men,Rural,0.0,0.0,premium,high,low,8,6,2025
+FB000508,Accessories,H&M,Summer,Unknown,Brown,44.09,0.0,44.09,2025-08-06,2,2.0,False,,Unisex,Rural,0.0,0.0,budget,low,low,8,6,2025
+FB001806,Shoes,Zara,Fall,L,Red,115.09,0.0,115.09,2025-08-06,10,2.5,False,,Unisex,Urban,0.0,0.0,premium,low,low,8,6,2025
+FB000152,Shoes,Banana Republic,Winter,M,Navy,65.87,11.4,58.36,2025-08-06,15,3.9,False,,Unisex,Rural,7.510000000000005,11.40124487627145,budget,medium,average,8,6,2025
+FB001971,Shoes,Banana Republic,Summer,S,Blue,175.31,0.0,175.31,2025-08-06,13,,False,,Unisex,Urban,0.0,0.0,premium,medium,unrated,8,6,2025
+FB000915,Tops,Forever21,Summer,XS,Brown,81.84,0.0,81.84,2025-08-06,41,2.4,False,,Unisex,Rural,0.0,0.0,mid_range,high,low,8,6,2025
+FB000363,Shoes,Mango,Winter,L,White,83.05,39.8,50.0,2025-08-06,5,3.4,False,,Unisex,Rural,33.05,39.79530403371463,mid_range,low,average,8,6,2025
+FB000167,Accessories,Mango,Spring,Unknown,Black,53.66,0.0,53.66,2024-12-19,40,2.8,False,,Unisex,Rural,0.0,0.0,budget,high,low,12,19,2024
+FB000814,Dresses,Zara,Winter,M,Red,82.5,0.0,82.5,2025-08-06,0,,False,,Women,Rural,0.0,0.0,mid_range,out_of_stock,unrated,8,6,2025
+FB000358,Accessories,Forever21,Winter,Unknown,Pink,68.57,29.4,48.41,2025-08-06,4,3.5,False,,Unisex,Rural,20.159999999999997,29.400612512760677,mid_range,low,average,8,6,2025
+FB000717,Outerwear,Forever21,Fall,L,Pink,145.93,0.0,145.93,2025-08-06,19,1.5,False,,Men,Rural,0.0,0.0,premium,medium,low,8,6,2025
+FB002029,Tops,Zara,Fall,S,White,100.98,0.0,100.98,2025-08-06,41,,False,,Unisex,Urban,0.0,0.0,mid_range,high,unrated,8,6,2025
+FB002174,Accessories,Banana Republic,Winter,Unknown,Beige,79.37,54.8,35.88,2025-08-06,40,2.6,False,,Unisex,Rural,43.49,54.79400277182815,mid_range,high,low,8,6,2025
+FB001732,Tops,Mango,Summer,S,Red,43.22,46.7,23.04,2025-08-06,29,1.3,False,,Unisex,Rural,20.18,46.691346598796855,budget,medium,low,8,6,2025
+FB002050,Dresses,Mango,Winter,L,Beige,122.41,48.2,63.41,2025-08-06,49,4.5,False,,Women,Rural,59.0,48.19867657871089,premium,high,high,8,6,2025
+FB001755,Tops,Uniqlo,Fall,XXL,Red,109.19,0.0,109.19,2025-08-06,47,4.5,False,,Unisex,Rural,0.0,0.0,mid_range,high,high,8,6,2025
+FB000373,Shoes,Forever21,Summer,XXL,Purple,91.98,0.0,91.98,2025-08-06,48,3.9,False,,Unisex,Rural,0.0,0.0,mid_range,high,average,8,6,2025
+FB001791,Accessories,Mango,Winter,Unknown,Black,67.38,0.0,67.38,2025-08-06,15,1.6,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,6,2025
+FB001137,Tops,Zara,Winter,S,Blue,84.85,8.8,77.38,2025-08-06,19,4.1,True,Changed Mind,Unisex,Rural,7.469999999999999,8.803771361225692,mid_range,medium,high,8,6,2025
+FB001275,Bottoms,H&M,Winter,S,Gray,37.53,0.0,37.53,2025-08-06,8,3.0,True,Changed Mind,Unisex,Rural,0.0,0.0,budget,low,average,8,6,2025
+FB000277,Shoes,Uniqlo,Summer,XS,Black,71.44,0.0,71.44,2025-08-06,45,4.0,False,,Unisex,Rural,0.0,0.0,mid_range,high,high,8,6,2025
+FB001799,Accessories,Gap,Winter,Unknown,Black,58.99,0.0,58.99,2025-08-06,50,2.7,False,,Unisex,Rural,0.0,0.0,budget,high,low,8,6,2025
+FB001423,Bottoms,Uniqlo,Fall,XS,Purple,114.29,0.0,114.29,2025-08-06,9,3.2,False,,Unisex,Rural,0.0,0.0,premium,low,average,8,6,2025
+FB001893,Outerwear,Banana Republic,Spring,XL,Brown,155.75,0.0,155.75,2025-03-25,0,2.4,False,,Men,Urban,0.0,0.0,premium,out_of_stock,low,3,25,2025
+FB001846,Dresses,Gap,Fall,XL,Purple,92.59,0.0,92.59,2025-08-06,29,3.5,True,Size Issue,Women,Rural,0.0,0.0,mid_range,medium,average,8,6,2025
+FB001822,Outerwear,Forever21,Winter,S,Green,167.73,0.0,167.73,2025-08-06,4,4.9,False,,Men,Rural,0.0,0.0,premium,low,high,8,6,2025
+FB002053,Accessories,Zara,Summer,Unknown,Pink,49.31,0.0,49.31,2025-08-06,49,3.4,False,,Unisex,Rural,0.0,0.0,budget,high,average,8,6,2025
+FB000858,Accessories,Banana Republic,Spring,Unknown,Blue,31.37,44.1,17.54,2024-09-13,11,3.4,False,,Unisex,Rural,13.830000000000002,44.08670704494741,budget,medium,average,9,13,2024
+FB000997,Tops,Zara,Summer,S,Beige,116.82,0.0,116.82,2025-08-06,34,,False,,Unisex,Urban,0.0,0.0,premium,high,unrated,8,6,2025
+FB002151,Dresses,H&M,Fall,XL,Blue,134.41,55.3,60.08,2025-08-06,12,3.2,False,,Women,Urban,74.33,55.30094487017335,premium,medium,average,8,6,2025
+FB001721,Bottoms,Banana Republic,Winter,XXL,Red,70.78,0.0,70.78,2025-08-06,39,3.4,True,Color Mismatch,Unisex,Rural,0.0,0.0,mid_range,high,average,8,6,2025
+FB000998,Outerwear,Ann Taylor,Summer,XL,Green,129.78,9.5,117.45,2025-08-06,17,4.0,False,,Men,Rural,12.329999999999998,9.500693481276004,premium,medium,high,8,6,2025
+FB000710,Tops,Zara,Fall,M,White,51.35,19.7,41.23,2025-08-06,39,1.3,False,,Unisex,Rural,10.120000000000005,19.70788704965921,budget,high,low,8,6,2025
+FB000579,Tops,Zara,Summer,M,Navy,33.77,0.0,33.77,2025-08-06,12,3.8,False,,Unisex,Rural,0.0,0.0,budget,medium,average,8,6,2025
+FB000211,Tops,Ann Taylor,Spring,S,Gray,25.49,16.7,21.23,2025-05-23,32,,False,,Unisex,Rural,4.259999999999998,16.712436249509604,budget,high,unrated,5,23,2025
+FB001620,Shoes,Gap,Winter,XL,Beige,183.3,0.0,183.3,2025-08-06,7,2.0,False,,Unisex,Rural,0.0,0.0,premium,low,low,8,6,2025
+FB001333,Accessories,H&M,Winter,Unknown,Navy,51.61,32.2,34.99,2025-08-06,34,4.8,False,,Unisex,Rural,16.619999999999997,32.203061422204996,budget,high,high,8,6,2025
+FB001818,Shoes,H&M,Spring,XXL,Brown,118.53,55.0,53.34,2025-04-25,2,4.9,False,,Unisex,Urban,65.19,54.99873449759554,premium,low,high,4,25,2025
+FB000017,Shoes,Gap,Summer,S,Beige,123.53,0.0,123.53,2025-08-06,14,4.6,False,,Unisex,Rural,0.0,0.0,premium,medium,high,8,6,2025
+FB000401,Dresses,Ann Taylor,Fall,XL,Pink,150.89,46.8,80.27,2025-08-06,18,4.9,False,,Women,Rural,70.61999999999999,46.802306315859234,premium,medium,high,8,6,2025
+FB001448,Outerwear,Zara,Fall,XL,Beige,163.77,30.5,113.82,2025-08-06,10,,False,,Men,Urban,49.95000000000002,30.500091591866653,premium,low,unrated,8,6,2025
+FB001488,Accessories,Uniqlo,Summer,Unknown,Red,79.02,2.5,77.04,2025-08-06,16,2.8,False,,Unisex,Rural,1.9799999999999898,2.505694760820033,mid_range,medium,low,8,6,2025
+FB001464,Bottoms,H&M,Winter,XXL,Green,80.21,0.0,80.21,2025-08-06,17,,False,,Unisex,Rural,0.0,0.0,mid_range,medium,unrated,8,6,2025
+FB000654,Shoes,Zara,Summer,XS,Red,145.4,0.0,145.4,2025-08-06,14,2.0,False,,Unisex,Urban,0.0,0.0,premium,medium,low,8,6,2025
+FB000408,Outerwear,Banana Republic,Winter,XS,Blue,165.88,3.4,160.24,2025-08-06,42,2.4,False,,Men,Urban,5.639999999999986,3.4000482276344264,premium,high,low,8,6,2025
+FB000652,Shoes,Ann Taylor,Winter,M,Black,192.74,0.0,192.74,2025-08-06,43,4.3,False,,Unisex,Rural,0.0,0.0,premium,high,high,8,6,2025
+FB001454,Shoes,H&M,Fall,S,Navy,191.94,1.3,189.44,2025-08-06,39,1.2,False,,Unisex,Urban,2.5,1.3024903615713244,premium,high,low,8,6,2025
+FB001950,Dresses,Zara,Summer,XL,Purple,105.5,59.8,42.41,2025-08-06,34,,False,,Women,Urban,63.09,59.800947867298575,mid_range,high,unrated,8,6,2025
+FB000351,Accessories,Forever21,Summer,Unknown,Brown,47.45,16.4,39.67,2025-08-06,33,1.7,False,,Unisex,Rural,7.780000000000001,16.396206533192835,budget,high,low,8,6,2025
+FB001596,Shoes,Zara,Spring,S,White,83.17,0.0,83.17,2024-09-03,48,3.2,False,,Unisex,Rural,0.0,0.0,mid_range,high,average,9,3,2024
+FB000384,Accessories,Banana Republic,Summer,Unknown,Gray,60.22,0.0,60.22,2025-08-06,6,2.1,False,,Unisex,Rural,0.0,0.0,budget,low,low,8,6,2025
+FB001445,Accessories,Uniqlo,Fall,Unknown,Black,61.84,0.0,61.84,2025-08-06,0,4.7,True,Wrong Item,Unisex,Rural,0.0,0.0,budget,out_of_stock,high,8,6,2025
+FB002043,Outerwear,Forever21,Winter,L,Gray,144.64,0.0,144.64,2025-08-06,0,4.5,False,,Men,Rural,0.0,0.0,premium,out_of_stock,high,8,6,2025
+FB001027,Outerwear,Gap,Fall,L,Purple,178.39,0.0,178.39,2025-08-06,29,4.2,False,,Men,Rural,0.0,0.0,premium,medium,high,8,6,2025
+FB001867,Tops,H&M,Spring,L,Black,71.68,0.0,71.68,2025-08-05,0,1.5,False,,Unisex,Rural,0.0,0.0,mid_range,out_of_stock,low,8,5,2025
+FB000633,Bottoms,Zara,Winter,S,Brown,52.43,6.4,49.07,2025-08-06,42,2.6,False,,Unisex,Rural,3.3599999999999994,6.408544726301734,budget,high,low,8,6,2025
+FB000909,Shoes,Forever21,Summer,XXL,Green,94.93,16.6,79.17,2025-08-06,39,4.8,False,,Unisex,Rural,15.760000000000005,16.601706520594124,mid_range,high,high,8,6,2025
+FB001873,Outerwear,H&M,Winter,S,Purple,215.99,38.1,133.7,2025-08-06,14,3.9,False,,Men,Urban,82.29000000000002,38.098986064169644,premium,medium,average,8,6,2025
+FB000027,Bottoms,Banana Republic,Summer,L,Red,47.04,36.0,30.11,2025-08-06,25,1.1,True,Damaged,Unisex,Rural,16.93,35.9906462585034,budget,medium,low,8,6,2025
+FB002011,Outerwear,Zara,Fall,S,Beige,215.1,0.0,215.1,2025-08-06,16,2.5,False,,Men,Urban,0.0,0.0,premium,medium,low,8,6,2025
+FB002145,Accessories,Uniqlo,Fall,Unknown,Black,17.87,0.0,17.87,2025-08-06,47,,False,,Unisex,Rural,0.0,0.0,budget,high,unrated,8,6,2025
+FB001073,Bottoms,Forever21,Winter,XL,Beige,119.92,0.0,119.92,2025-08-06,37,5.0,False,,Unisex,Rural,0.0,0.0,premium,high,high,8,6,2025
+FB001895,Shoes,Banana Republic,Fall,L,Red,169.77,0.0,169.77,2025-08-06,39,4.4,False,,Unisex,Urban,0.0,0.0,premium,high,high,8,6,2025
+FB000737,Bottoms,Banana Republic,Fall,XXL,Navy,74.67,0.0,74.67,2025-08-06,15,4.6,False,,Unisex,Rural,0.0,0.0,mid_range,medium,high,8,6,2025
+FB000809,Bottoms,Uniqlo,Spring,M,Navy,52.42,9.9,47.23,2024-10-16,42,3.5,False,,Unisex,Rural,5.190000000000005,9.90080122090806,budget,high,average,10,16,2024
+FB000842,Outerwear,Forever21,Fall,S,Gray,103.49,0.0,103.49,2025-08-06,12,1.8,False,,Men,Rural,0.0,0.0,mid_range,medium,low,8,6,2025
+FB001390,Tops,Banana Republic,Fall,S,Gray,85.94,0.0,85.94,2025-08-06,49,1.5,False,,Unisex,Rural,0.0,0.0,mid_range,high,low,8,6,2025
+FB000164,Accessories,H&M,Spring,Unknown,Green,23.11,0.0,23.11,2024-09-17,2,1.4,False,,Unisex,Rural,0.0,0.0,budget,low,low,9,17,2024
+FB001302,Accessories,Mango,Fall,Unknown,Navy,53.64,0.0,53.64,2025-08-06,18,2.3,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,6,2025
+FB001740,Tops,Gap,Spring,XL,Gray,105.37,0.0,105.37,2025-04-15,24,1.2,False,,Unisex,Rural,0.0,0.0,mid_range,medium,low,4,15,2025
+FB001209,Accessories,Zara,Spring,Unknown,Blue,15.92,0.0,15.92,2024-09-06,7,4.1,False,,Unisex,Rural,0.0,0.0,budget,low,high,9,6,2024
+FB000315,Outerwear,Ann Taylor,Summer,XS,Red,101.75,0.0,101.75,2025-08-06,7,3.1,False,,Men,Rural,0.0,0.0,mid_range,low,average,8,6,2025
+FB000649,Bottoms,Banana Republic,Summer,XS,White,110.6,0.0,110.6,2025-08-06,19,,True,Color Mismatch,Unisex,Urban,0.0,0.0,mid_range,medium,unrated,8,6,2025
+FB001420,Tops,Zara,Spring,XL,Blue,88.77,0.0,88.77,2025-05-16,40,4.8,False,,Unisex,Rural,0.0,0.0,mid_range,high,high,5,16,2025
+FB001753,Shoes,Uniqlo,Summer,M,Brown,121.33,0.0,121.33,2025-08-06,30,4.2,False,,Unisex,Rural,0.0,0.0,premium,medium,high,8,6,2025
+FB001750,Outerwear,Mango,Summer,XS,Green,186.66,30.9,128.98,2025-08-06,7,1.0,False,,Men,Rural,57.68000000000001,30.90110361084325,premium,low,low,8,6,2025
+FB001323,Shoes,Mango,Fall,S,Navy,116.38,11.4,103.11,2025-08-06,15,,False,,Unisex,Rural,13.269999999999996,11.402302801168583,premium,medium,unrated,8,6,2025
+FB000525,Tops,Mango,Spring,L,Black,98.16,56.7,42.5,2025-02-05,44,2.6,False,,Unisex,Rural,55.66,56.70334148329258,mid_range,high,low,2,5,2025
+FB000665,Bottoms,Forever21,Summer,XS,Gray,91.4,11.0,81.35,2025-08-06,18,1.6,False,,Unisex,Rural,10.050000000000011,10.995623632385133,mid_range,medium,low,8,6,2025
+FB000732,Dresses,Mango,Summer,XL,White,70.38,0.0,70.38,2025-08-06,37,2.0,False,,Women,Rural,0.0,0.0,mid_range,high,low,8,6,2025
+FB001675,Accessories,Forever21,Fall,Unknown,Black,42.96,0.0,42.96,2025-08-06,36,1.1,False,,Unisex,Rural,0.0,0.0,budget,high,low,8,6,2025
+FB001202,Accessories,Uniqlo,Spring,Unknown,Green,45.81,14.1,39.35,2025-04-14,29,,False,,Unisex,Rural,6.460000000000001,14.10172451429819,budget,medium,unrated,4,14,2025
+FB000888,Accessories,H&M,Spring,Unknown,Green,46.97,0.0,46.97,2025-02-24,33,2.6,False,,Unisex,Rural,0.0,0.0,budget,high,low,2,24,2025
+FB001269,Bottoms,Uniqlo,Spring,L,Blue,79.27,0.0,79.27,2025-05-11,13,3.5,False,,Unisex,Rural,0.0,0.0,mid_range,medium,average,5,11,2025
+FB001436,Shoes,Mango,Fall,XL,Pink,155.85,0.0,155.85,2025-08-06,1,3.5,False,,Unisex,Rural,0.0,0.0,premium,low,average,8,6,2025
+FB000536,Bottoms,Zara,Summer,L,Purple,104.16,0.0,104.16,2025-08-06,21,1.6,False,,Unisex,Urban,0.0,0.0,mid_range,medium,low,8,6,2025
+FB001624,Accessories,Banana Republic,Spring,Unknown,Green,44.7,0.0,44.7,2025-03-17,29,3.2,False,,Unisex,Rural,0.0,0.0,budget,medium,average,3,17,2025
+FB002049,Bottoms,Gap,Fall,M,Navy,90.97,10.8,81.15,2025-08-06,33,2.2,True,Damaged,Unisex,Rural,9.819999999999993,10.794767505771127,mid_range,high,low,8,6,2025
+FB002132,Dresses,H&M,Spring,M,Green,105.59,0.0,105.59,2025-06-27,37,4.7,False,,Women,Urban,0.0,0.0,mid_range,high,high,6,27,2025
+FB001953,Outerwear,Banana Republic,Winter,L,Blue,107.67,20.3,85.81,2025-08-06,16,4.3,False,,Men,Urban,21.86,20.302777003807932,mid_range,medium,high,8,6,2025
+FB000201,Bottoms,Zara,Spring,XS,Green,42.91,33.3,28.62,2024-11-23,18,,False,,Unisex,Rural,14.289999999999996,33.30226054532742,budget,medium,unrated,11,23,2024
+FB001909,Bottoms,Uniqlo,Spring,XS,Pink,96.68,26.0,71.54,2024-09-21,16,,False,,Unisex,Rural,25.14,26.00330988829127,mid_range,medium,unrated,9,21,2024
+FB000417,Tops,Zara,Summer,XXL,Black,94.96,35.4,61.34,2025-08-06,34,3.9,False,,Unisex,Rural,33.61999999999999,35.404380791912374,mid_range,high,average,8,6,2025
+FB001313,Shoes,Uniqlo,Fall,XXL,Brown,167.27,0.0,167.27,2025-08-06,9,4.0,False,,Unisex,Rural,0.0,0.0,premium,low,high,8,6,2025
+FB001880,Outerwear,Uniqlo,Spring,S,Brown,138.98,10.2,124.8,2025-07-22,36,1.4,False,,Men,Rural,14.179999999999993,10.202906893078136,premium,high,low,7,22,2025
+FB000217,Outerwear,Uniqlo,Fall,XL,Pink,110.22,0.0,110.22,2025-08-06,4,1.6,False,,Men,Rural,0.0,0.0,mid_range,low,low,8,6,2025
+FB001517,Shoes,H&M,Winter,L,Blue,138.79,0.0,138.79,2025-08-06,16,,True,Size Issue,Unisex,Urban,0.0,0.0,premium,medium,unrated,8,6,2025
+FB000038,Dresses,Banana Republic,Summer,L,White,110.09,0.0,110.09,2025-08-06,32,3.4,False,,Women,Urban,0.0,0.0,mid_range,high,average,8,6,2025
+FB001474,Shoes,Mango,Summer,L,Red,186.53,0.0,186.53,2025-08-06,31,2.6,False,,Unisex,Rural,0.0,0.0,premium,high,low,8,6,2025
+FB000343,Shoes,Mango,Fall,M,White,70.04,0.0,70.04,2025-08-06,12,2.4,False,,Unisex,Rural,0.0,0.0,mid_range,medium,low,8,6,2025
+FB000844,Accessories,H&M,Winter,Unknown,Green,73.51,32.2,49.84,2025-08-06,17,,True,Wrong Item,Unisex,Rural,23.67,32.199700720990336,mid_range,medium,unrated,8,6,2025
+FB001038,Accessories,H&M,Summer,Unknown,Gray,68.22,8.1,62.69,2025-08-06,28,4.0,False,,Unisex,Rural,5.530000000000001,8.106127235414837,mid_range,medium,high,8,6,2025
+FB000170,Shoes,Banana Republic,Winter,XXL,Red,113.58,0.0,113.58,2025-08-06,33,4.9,True,Wrong Item,Unisex,Urban,0.0,0.0,premium,high,high,8,6,2025
+FB001912,Accessories,Mango,Fall,Unknown,Gray,23.56,0.0,23.56,2025-08-06,16,4.4,False,,Unisex,Rural,0.0,0.0,budget,medium,high,8,6,2025
+FB001896,Accessories,Uniqlo,Winter,Unknown,Blue,41.52,27.3,30.19,2025-08-06,48,3.4,False,,Unisex,Rural,11.330000000000002,27.288053949903663,budget,high,average,8,6,2025
+FB001669,Tops,Zara,Spring,XXL,Green,47.88,0.0,47.88,2024-12-21,44,1.9,False,,Unisex,Rural,0.0,0.0,budget,high,low,12,21,2024
+FB002039,Tops,Uniqlo,Fall,XL,Beige,72.78,0.0,72.78,2025-08-06,49,3.1,False,,Unisex,Rural,0.0,0.0,mid_range,high,average,8,6,2025
+FB001682,Dresses,Gap,Fall,M,Red,113.05,0.0,113.05,2025-08-06,47,2.0,False,,Women,Rural,0.0,0.0,premium,high,low,8,6,2025
+FB001426,Shoes,Mango,Winter,L,Purple,64.94,0.0,64.94,2025-08-06,32,4.5,False,,Unisex,Rural,0.0,0.0,budget,high,high,8,6,2025
+FB001768,Dresses,H&M,Fall,L,Blue,111.55,0.0,111.55,2025-08-06,14,,False,,Women,Urban,0.0,0.0,mid_range,medium,unrated,8,6,2025
+FB001550,Bottoms,Gap,Winter,XS,Navy,51.39,6.3,48.15,2025-08-06,46,,False,,Unisex,Rural,3.240000000000002,6.3047285464098115,budget,high,unrated,8,6,2025
+FB000516,Bottoms,Banana Republic,Winter,XL,Gray,119.04,0.0,119.04,2025-08-06,35,1.4,False,,Unisex,Urban,0.0,0.0,premium,high,low,8,6,2025
+FB000184,Tops,Mango,Winter,XXL,Pink,114.86,0.0,114.86,2025-08-06,48,1.1,False,,Unisex,Rural,0.0,0.0,premium,high,low,8,6,2025
+FB000601,Bottoms,Zara,Fall,M,White,93.38,0.0,93.38,2025-08-06,7,3.5,False,,Unisex,Rural,0.0,0.0,mid_range,low,average,8,6,2025
+FB000302,Shoes,H&M,Fall,XXL,Gray,85.54,0.0,85.54,2025-08-06,30,,False,,Unisex,Rural,0.0,0.0,mid_range,medium,unrated,8,6,2025
+FB000075,Dresses,Mango,Spring,XS,Green,100.96,0.0,100.96,2025-05-10,32,3.3,False,,Women,Rural,0.0,0.0,mid_range,high,average,5,10,2025
+FB000698,Tops,Mango,Winter,S,Pink,118.95,0.0,118.95,2025-08-06,18,1.9,True,Quality Issue,Unisex,Rural,0.0,0.0,premium,medium,low,8,6,2025
+FB001468,Shoes,Banana Republic,Fall,XXL,Navy,194.05,0.0,194.05,2025-08-06,7,1.3,False,,Unisex,Urban,0.0,0.0,premium,low,low,8,6,2025
+FB000047,Shoes,Mango,Summer,L,Pink,147.13,30.3,102.55,2025-08-06,13,4.4,False,,Unisex,Rural,44.58,30.299734928294708,premium,medium,high,8,6,2025
+FB001694,Accessories,Mango,Winter,Unknown,Blue,32.95,50.2,16.41,2025-08-06,46,,False,,Unisex,Rural,16.540000000000003,50.19726858877087,budget,high,unrated,8,6,2025
+FB001514,Accessories,Ann Taylor,Winter,Unknown,Beige,33.88,0.0,33.88,2025-08-06,9,,False,,Unisex,Rural,0.0,0.0,budget,low,unrated,8,6,2025
+FB001483,Tops,Gap,Spring,XS,Brown,65.27,19.0,52.87,2024-08-29,48,3.0,False,,Unisex,Rural,12.399999999999999,18.99800827332618,budget,high,average,8,29,2024
+FB000617,Accessories,Zara,Summer,Unknown,Beige,61.29,0.0,61.29,2025-08-06,15,4.0,False,,Unisex,Rural,0.0,0.0,budget,medium,high,8,6,2025
+FB001195,Outerwear,Zara,Winter,XL,Gray,107.81,0.0,107.81,2025-08-06,15,2.7,False,,Men,Urban,0.0,0.0,mid_range,medium,low,8,6,2025
+FB001439,Tops,Uniqlo,Spring,XS,Blue,76.95,0.0,76.95,2025-01-12,9,2.5,False,,Unisex,Rural,0.0,0.0,mid_range,low,low,1,12,2025
+FB001114,Shoes,Forever21,Winter,L,Blue,118.97,0.0,118.97,2025-08-06,45,3.8,False,,Unisex,Rural,0.0,0.0,premium,high,average,8,6,2025
+FB002020,Accessories,Forever21,Winter,Unknown,Red,38.86,0.0,38.86,2025-08-06,44,,False,,Unisex,Rural,0.0,0.0,budget,high,unrated,8,6,2025
+FB001170,Bottoms,Zara,Spring,Unknown,Beige,71.6,41.9,41.6,2025-04-12,16,2.8,False,,Unisex,Rural,29.999999999999993,41.89944134078211,mid_range,medium,low,4,12,2025
+FB000485,Tops,Gap,Summer,S,Pink,114.03,0.0,114.03,2025-08-06,2,,False,,Unisex,Rural,0.0,0.0,premium,low,unrated,8,6,2025
+FB001667,Bottoms,Forever21,Winter,XS,Red,83.18,0.0,83.18,2025-08-06,17,1.7,True,Size Issue,Unisex,Rural,0.0,0.0,mid_range,medium,low,8,6,2025
+FB000316,Dresses,Mango,Spring,XS,Blue,131.08,7.5,121.25,2024-12-04,20,4.5,True,Wrong Item,Women,Rural,9.830000000000013,7.49923710711017,premium,medium,high,12,4,2024
+FB001473,Bottoms,Zara,Fall,L,Black,108.65,0.0,108.65,2025-08-06,26,2.4,False,,Unisex,Urban,0.0,0.0,mid_range,medium,low,8,6,2025
+FB000001,Outerwear,Zara,Spring,XL,Red,196.01,0.0,196.01,2025-07-05,37,3.0,False,,Men,Urban,0.0,0.0,premium,high,average,7,5,2025
+FB002040,Shoes,Uniqlo,Fall,S,Red,189.32,0.0,189.32,2025-08-06,35,2.5,False,,Unisex,Rural,0.0,0.0,premium,high,low,8,6,2025
+FB002096,Bottoms,Gap,Winter,M,Green,112.1,30.7,77.69,2025-08-06,10,1.0,False,,Unisex,Rural,34.41,30.69580731489741,mid_range,low,low,8,6,2025
+FB001451,Accessories,Ann Taylor,Spring,Unknown,Black,40.55,6.2,38.04,2024-09-09,26,3.7,True,Wrong Item,Unisex,Rural,2.509999999999998,6.189889025893954,budget,medium,average,9,9,2024
+FB001230,Dresses,Forever21,Fall,S,Navy,120.42,36.7,76.23,2025-08-06,46,2.4,False,,Women,Rural,44.19,36.696562032884906,premium,high,low,8,6,2025
+FB001344,Tops,Gap,Winter,XS,White,95.22,24.4,71.99,2025-08-06,26,2.3,False,,Unisex,Rural,23.230000000000004,24.396135265700487,mid_range,medium,low,8,6,2025
+FB001347,Tops,Forever21,Winter,XS,Blue,59.53,0.0,59.53,2025-08-06,28,1.5,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,6,2025
+FB000736,Accessories,Gap,Spring,Unknown,Red,79.94,0.0,79.94,2025-07-31,26,3.8,False,,Unisex,Rural,0.0,0.0,mid_range,medium,average,7,31,2025
+FB000493,Dresses,Forever21,Summer,XXL,White,111.29,0.0,111.29,2025-08-06,48,4.9,False,,Women,Rural,0.0,0.0,mid_range,high,high,8,6,2025
+FB000322,Dresses,Uniqlo,Winter,XXL,Blue,89.17,10.8,79.54,2025-08-06,27,3.3,False,,Women,Rural,9.629999999999995,10.799596276774695,mid_range,medium,average,8,6,2025
+FB001075,Shoes,Gap,Fall,XL,Pink,179.59,14.7,153.19,2025-08-06,47,2.9,False,,Unisex,Rural,26.400000000000006,14.700150342446687,premium,high,low,8,6,2025
+FB001431,Dresses,Mango,Winter,M,Navy,68.51,0.0,68.51,2025-08-06,1,2.6,False,,Women,Rural,0.0,0.0,mid_range,low,low,8,6,2025
+FB000954,Shoes,Uniqlo,Fall,XS,Pink,199.14,0.0,199.14,2025-08-06,18,,False,,Unisex,Rural,0.0,0.0,premium,medium,unrated,8,6,2025
+FB000059,Tops,Mango,Summer,XS,Black,28.59,0.0,28.59,2025-08-06,39,1.4,False,,Unisex,Rural,0.0,0.0,budget,high,low,8,6,2025
+FB000928,Accessories,Uniqlo,Spring,Unknown,Black,66.18,0.0,66.18,2025-05-23,20,1.7,False,,Unisex,Rural,0.0,0.0,budget,medium,low,5,23,2025
+FB001693,Accessories,Mango,Fall,Unknown,Brown,66.49,29.1,47.14,2025-08-06,37,1.3,False,,Unisex,Rural,19.349999999999994,29.102120619642047,budget,high,low,8,6,2025
+FB000937,Shoes,Uniqlo,Winter,XXL,Pink,112.77,0.0,112.77,2025-08-06,11,4.1,False,,Unisex,Rural,0.0,0.0,mid_range,medium,high,8,6,2025
+FB001040,Outerwear,Forever21,Fall,XXL,Purple,100.39,16.5,83.83,2025-08-06,17,4.6,False,,Men,Rural,16.560000000000002,16.49566689909354,mid_range,medium,high,8,6,2025
+FB000530,Accessories,Uniqlo,Spring,Unknown,Gray,15.14,36.7,9.58,2025-07-23,41,3.8,False,,Unisex,Rural,5.5600000000000005,36.723910171730516,budget,high,average,7,23,2025
+FB000862,Tops,Banana Republic,Fall,M,Red,51.88,16.8,43.16,2025-08-06,30,1.5,False,,Unisex,Rural,8.720000000000006,16.808018504240565,budget,medium,low,8,6,2025
+FB000681,Accessories,Forever21,Winter,Unknown,Green,25.7,0.0,25.7,2025-08-06,38,3.2,True,Quality Issue,Unisex,Rural,0.0,0.0,budget,high,average,8,6,2025
+FB000904,Shoes,Mango,Summer,XS,Beige,80.56,0.0,80.56,2025-08-06,7,1.9,False,,Unisex,Rural,0.0,0.0,mid_range,low,low,8,6,2025
+FB001141,Outerwear,Banana Republic,Spring,L,Red,133.92,0.0,133.92,2025-04-13,41,2.8,False,,Men,Urban,0.0,0.0,premium,high,low,4,13,2025
+FB001935,Outerwear,H&M,Summer,L,Red,83.68,28.1,60.17,2025-08-06,46,,True,Quality Issue,Men,Rural,23.510000000000005,28.095124282982795,mid_range,high,unrated,8,6,2025
+FB000673,Bottoms,Banana Republic,Summer,L,Navy,49.75,26.4,36.62,2025-08-06,24,3.8,False,,Unisex,Rural,13.130000000000003,26.39195979899498,budget,medium,average,8,6,2025
+FB001050,Dresses,Banana Republic,Summer,XL,White,98.33,0.0,98.33,2025-08-06,46,3.7,False,,Women,Urban,0.0,0.0,mid_range,high,average,8,6,2025
+FB001188,Accessories,Banana Republic,Fall,Unknown,Red,16.51,16.8,13.74,2025-08-06,47,1.2,False,,Unisex,Rural,2.7700000000000014,16.777710478497884,budget,high,low,8,6,2025
+FB001643,Dresses,H&M,Summer,M,Gray,80.19,0.0,80.19,2025-08-06,43,3.8,False,,Women,Rural,0.0,0.0,mid_range,high,average,8,6,2025
+FB001149,Bottoms,Forever21,Fall,L,Navy,115.82,2.9,112.46,2025-08-06,46,,False,,Unisex,Rural,3.3599999999999994,2.9010533586599894,premium,high,unrated,8,6,2025
+FB002162,Shoes,Zara,Summer,L,Green,122.7,0.0,122.7,2025-08-06,9,,False,,Unisex,Urban,0.0,0.0,premium,low,unrated,8,6,2025
+FB000924,Bottoms,Zara,Winter,XL,Gray,102.25,0.0,102.25,2025-08-06,6,3.8,False,,Unisex,Urban,0.0,0.0,mid_range,low,average,8,6,2025
+FB000523,Dresses,Zara,Winter,S,Gray,113.21,0.0,113.21,2025-08-06,12,4.4,False,,Women,Urban,0.0,0.0,premium,medium,high,8,6,2025
+FB000051,Bottoms,H&M,Fall,M,Beige,50.91,0.0,50.91,2025-08-06,3,1.8,False,,Unisex,Rural,0.0,0.0,budget,low,low,8,6,2025
+FB000609,Accessories,Forever21,Spring,Unknown,Red,32.62,29.1,23.13,2025-07-27,9,1.4,False,,Unisex,Rural,9.489999999999998,29.092581238503985,budget,low,low,7,27,2025
+FB000349,Accessories,Gap,Summer,Unknown,Purple,21.9,29.2,15.51,2025-08-06,35,2.0,False,,Unisex,Rural,6.389999999999999,29.178082191780817,budget,high,low,8,6,2025
+FB000641,Dresses,Mango,Fall,L,Navy,53.17,0.0,53.17,2025-08-06,14,4.5,True,Changed Mind,Women,Rural,0.0,0.0,budget,medium,high,8,6,2025
+FB001978,Dresses,Ann Taylor,Winter,XL,White,81.78,10.0,73.6,2025-08-06,24,1.2,False,,Women,Rural,8.180000000000007,10.002445585717787,mid_range,medium,low,8,6,2025
+FB000031,Shoes,Uniqlo,Summer,S,Red,71.29,0.0,71.29,2025-08-06,37,4.1,True,Quality Issue,Unisex,Rural,0.0,0.0,mid_range,high,high,8,6,2025
+FB001165,Bottoms,Forever21,Spring,L,Beige,75.99,0.0,75.99,2025-02-18,19,1.7,True,Size Issue,Unisex,Rural,0.0,0.0,mid_range,medium,low,2,18,2025
+FB000007,Bottoms,Zara,Spring,S,Gray,53.83,54.5,24.49,2024-10-29,38,2.6,False,,Unisex,Rural,29.34,54.50492290544306,budget,high,low,10,29,2024
+FB001380,Bottoms,Mango,Summer,XL,Green,66.38,17.0,55.1,2025-08-06,24,4.9,True,Size Issue,Unisex,Rural,11.279999999999994,16.993070201868022,budget,medium,high,8,6,2025
+FB000362,Bottoms,Gap,Spring,XXL,Beige,97.29,0.0,97.29,2025-07-29,42,4.5,False,,Unisex,Rural,0.0,0.0,mid_range,high,high,7,29,2025
+FB001007,Accessories,Zara,Fall,Unknown,Purple,73.33,34.6,47.96,2025-08-06,45,2.1,False,,Unisex,Rural,25.369999999999997,34.59702713759716,mid_range,high,low,8,6,2025
+FB000747,Outerwear,Ann Taylor,Winter,XXL,Gray,200.24,23.0,154.18,2025-08-06,38,,False,,Men,Rural,46.06,23.002397123451857,premium,high,unrated,8,6,2025
+FB001972,Dresses,Zara,Spring,L,Red,171.92,0.0,171.92,2025-06-08,12,1.3,False,,Women,Urban,0.0,0.0,premium,medium,low,6,8,2025
+FB001425,Tops,Ann Taylor,Spring,XL,Blue,38.56,0.0,38.56,2025-05-30,39,1.5,False,,Unisex,Rural,0.0,0.0,budget,high,low,5,30,2025
+FB000556,Tops,Ann Taylor,Spring,XS,Pink,38.5,0.0,38.5,2025-03-06,2,3.2,False,,Unisex,Rural,0.0,0.0,budget,low,average,3,6,2025
+FB001106,Accessories,Zara,Summer,Unknown,Navy,30.62,0.0,30.62,2025-08-06,31,3.0,True,Damaged,Unisex,Rural,0.0,0.0,budget,high,average,8,6,2025
+FB000988,Shoes,Zara,Spring,S,Gray,142.84,0.0,142.84,2025-02-14,36,,False,,Unisex,Urban,0.0,0.0,premium,high,unrated,2,14,2025
+FB001350,Outerwear,Mango,Winter,XXL,Brown,237.53,23.2,182.42,2025-08-06,23,2.2,False,,Men,Rural,55.110000000000014,23.201279838336216,premium,medium,low,8,6,2025
+FB002159,Dresses,Gap,Winter,XXL,Gray,171.16,0.0,171.16,2025-08-06,26,4.3,False,,Women,Rural,0.0,0.0,premium,medium,high,8,6,2025
+FB000532,Accessories,Zara,Spring,Unknown,Gray,78.04,0.0,78.04,2025-04-09,38,4.9,False,,Unisex,Rural,0.0,0.0,mid_range,high,high,4,9,2025
+FB001127,Dresses,Gap,Summer,L,Gray,162.42,40.9,95.99,2025-08-06,32,1.0,False,,Women,Rural,66.42999999999999,40.9001354512991,premium,high,low,8,6,2025
+FB002113,Outerwear,Forever21,Fall,M,Pink,169.98,5.8,160.12,2025-08-06,12,2.1,False,,Men,Rural,9.859999999999985,5.80068243322743,premium,medium,low,8,6,2025
+FB001042,Accessories,Gap,Spring,Unknown,White,50.14,29.2,35.5,2025-02-04,33,4.4,False,,Unisex,Rural,14.64,29.198244914240128,budget,high,high,2,4,2025
+FB001169,Outerwear,Uniqlo,Winter,XXL,Gray,134.59,33.6,89.37,2025-08-06,42,2.9,False,,Men,Rural,45.22,33.59833568615796,premium,high,low,8,6,2025
+FB000179,Tops,Forever21,Winter,XS,Brown,33.01,39.2,20.07,2025-08-06,16,3.7,False,,Unisex,Rural,12.939999999999998,39.20024235080278,budget,medium,average,8,6,2025
+FB000452,Tops,Zara,Winter,XL,Black,85.34,59.4,34.65,2025-08-06,5,4.9,False,,Unisex,Rural,50.690000000000005,59.39770330442935,mid_range,low,high,8,6,2025
+FB001327,Dresses,Mango,Fall,S,Green,156.27,0.0,156.27,2025-08-06,43,,False,,Women,Rural,0.0,0.0,premium,high,unrated,8,6,2025
+FB000260,Accessories,Banana Republic,Winter,Unknown,Beige,24.96,44.7,13.8,2025-08-06,44,,False,,Unisex,Rural,11.16,44.71153846153846,budget,high,unrated,8,6,2025
+FB000615,Accessories,Banana Republic,Winter,Unknown,Pink,66.0,0.0,66.0,2025-08-06,19,2.6,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,6,2025
+FB002112,Accessories,Mango,Summer,Unknown,Brown,41.04,0.0,41.04,2025-08-06,43,,False,,Unisex,Rural,0.0,0.0,budget,high,unrated,8,6,2025
+FB001041,Tops,Gap,Fall,XS,Navy,100.03,0.0,100.03,2025-08-06,39,1.2,False,,Unisex,Rural,0.0,0.0,mid_range,high,low,8,6,2025
+FB002166,Accessories,Banana Republic,Summer,Unknown,Black,76.08,0.0,76.08,2025-08-06,6,4.9,False,,Unisex,Rural,0.0,0.0,mid_range,low,high,8,6,2025
+FB000386,Dresses,Banana Republic,Spring,XL,Brown,54.97,49.6,27.7,2024-10-08,48,4.5,False,,Women,Rural,27.27,49.60887756958341,budget,high,high,10,8,2024
+FB001295,Tops,H&M,Summer,XXL,Navy,119.04,1.7,117.02,2025-08-06,34,4.1,False,,Unisex,Urban,2.0200000000000102,1.6969086021505462,premium,high,high,8,6,2025
+FB000074,Tops,Mango,Fall,XS,Red,112.86,0.0,112.86,2025-08-06,8,2.9,False,,Unisex,Rural,0.0,0.0,mid_range,low,low,8,6,2025
+FB001851,Accessories,Ann Taylor,Winter,Unknown,Green,51.3,6.1,48.17,2025-08-06,31,,False,,Unisex,Rural,3.1299999999999955,6.101364522417145,budget,high,unrated,8,6,2025
+FB002157,Dresses,Forever21,Summer,M,Black,154.11,0.0,154.11,2025-08-06,50,3.1,False,,Women,Rural,0.0,0.0,premium,high,average,8,6,2025
+FB000092,Accessories,Zara,Winter,Unknown,Brown,30.95,0.0,30.95,2025-08-06,27,3.1,True,Changed Mind,Unisex,Rural,0.0,0.0,budget,medium,average,8,6,2025
+FB001838,Shoes,Forever21,Spring,Unknown,White,107.09,43.1,60.93,2025-02-14,16,4.7,True,Changed Mind,Unisex,Rural,46.160000000000004,43.10393127276123,mid_range,medium,high,2,14,2025
+FB001742,Shoes,Uniqlo,Spring,XS,Gray,164.86,14.3,141.29,2025-03-14,7,2.3,False,,Unisex,Rural,23.57000000000002,14.296979255125574,premium,low,low,3,14,2025
+FB001013,Outerwear,H&M,Winter,XXL,Green,153.59,0.0,153.59,2025-08-06,31,2.9,True,Damaged,Men,Urban,0.0,0.0,premium,high,low,8,6,2025
+FB001691,Accessories,Zara,Spring,Unknown,Brown,54.92,0.0,54.92,2025-04-12,44,3.1,False,,Unisex,Rural,0.0,0.0,budget,high,average,4,12,2025
+FB001399,Tops,Ann Taylor,Summer,M,Brown,95.55,0.0,95.55,2025-08-06,25,4.7,False,,Unisex,Rural,0.0,0.0,mid_range,medium,high,8,6,2025
+FB002136,Dresses,Uniqlo,Spring,Unknown,Blue,85.49,0.0,85.49,2024-12-16,0,3.7,False,,Women,Rural,0.0,0.0,mid_range,out_of_stock,average,12,16,2024
+FB002038,Accessories,Ann Taylor,Spring,Unknown,Purple,42.94,34.3,28.21,2024-12-22,41,,False,,Unisex,Rural,14.729999999999997,34.30367955286446,budget,high,unrated,12,22,2024
+FB002115,Dresses,Banana Republic,Spring,S,Purple,139.87,14.5,119.59,2024-09-13,13,1.3,False,,Women,Urban,20.28,14.499177807964537,premium,medium,low,9,13,2024
+FB000060,Shoes,Mango,Winter,XXL,Blue,166.49,2.6,162.16,2025-08-06,27,,False,,Unisex,Rural,4.3300000000000125,2.60075680221035,premium,medium,unrated,8,6,2025
+FB001899,Bottoms,Forever21,Summer,S,Gray,101.45,7.8,93.54,2025-08-06,4,1.1,False,,Unisex,Rural,7.909999999999997,7.796944307540657,mid_range,low,low,8,6,2025
+FB000907,Shoes,H&M,Fall,XXL,Green,174.99,50.1,87.32,2025-08-06,7,4.9,False,,Unisex,Urban,87.67000000000002,50.10000571461227,premium,low,high,8,6,2025
+FB001510,Dresses,Uniqlo,Summer,Unknown,Navy,161.53,5.3,152.97,2025-08-06,33,3.7,False,,Women,Rural,8.560000000000002,5.299325202748717,premium,high,average,8,6,2025
+FB000739,Bottoms,Ann Taylor,Fall,XXL,Brown,49.6,0.0,49.6,2025-08-06,32,4.7,False,,Unisex,Rural,0.0,0.0,budget,high,high,8,6,2025
+FB000968,Shoes,Ann Taylor,Fall,XS,Purple,121.21,47.4,63.76,2025-08-06,45,3.0,True,Changed Mind,Unisex,Rural,57.449999999999996,47.39707944889036,premium,high,average,8,6,2025
+FB001418,Accessories,Zara,Spring,Unknown,Brown,62.21,1.8,61.09,2024-11-03,4,2.3,False,,Unisex,Rural,1.1199999999999974,1.8003536408937428,budget,low,low,11,3,2024
+FB001986,Tops,H&M,Spring,L,Navy,109.76,0.0,109.76,2025-01-12,23,2.0,True,Quality Issue,Unisex,Urban,0.0,0.0,mid_range,medium,low,1,12,2025
+FB000987,Outerwear,Uniqlo,Spring,XL,White,122.92,0.0,122.92,2024-11-06,41,2.9,False,,Men,Rural,0.0,0.0,premium,high,low,11,6,2024
+FB001222,Shoes,Mango,Fall,M,Black,110.1,0.0,110.1,2025-08-06,13,3.6,True,Changed Mind,Unisex,Rural,0.0,0.0,mid_range,medium,average,8,6,2025
+FB002004,Dresses,Uniqlo,Spring,L,Purple,146.68,0.0,146.68,2024-08-07,8,,False,,Women,Rural,0.0,0.0,premium,low,unrated,8,7,2024
+FB002087,Shoes,Mango,Winter,M,Black,89.12,0.0,89.12,2025-08-06,27,,True,Damaged,Unisex,Rural,0.0,0.0,mid_range,medium,unrated,8,6,2025
+FB001995,Shoes,Uniqlo,Spring,M,Gray,76.3,0.0,76.3,2025-07-03,35,2.6,False,,Unisex,Rural,0.0,0.0,mid_range,high,low,7,3,2025
+FB000120,Outerwear,Zara,Spring,L,Red,248.58,0.0,248.58,2025-07-04,27,1.5,False,,Men,Urban,0.0,0.0,premium,medium,low,7,4,2025
+FB002063,Accessories,H&M,Fall,Unknown,Beige,37.27,0.0,37.27,2025-08-06,15,3.8,False,,Unisex,Rural,0.0,0.0,budget,medium,average,8,6,2025
+FB000995,Shoes,Gap,Spring,M,Purple,99.33,0.0,99.33,2025-05-21,16,3.9,False,,Unisex,Rural,0.0,0.0,mid_range,medium,average,5,21,2025
+FB001258,Tops,Zara,Summer,S,Purple,106.2,0.0,106.2,2025-08-06,10,1.1,False,,Unisex,Urban,0.0,0.0,mid_range,low,low,8,6,2025
+FB000691,Tops,H&M,Spring,XL,Black,61.67,46.4,33.06,2025-07-15,50,2.7,False,,Unisex,Rural,28.61,46.392086914220855,budget,high,low,7,15,2025
+FB000268,Tops,Ann Taylor,Fall,S,White,90.63,0.0,90.63,2025-08-06,33,4.2,False,,Unisex,Rural,0.0,0.0,mid_range,high,high,8,6,2025
+FB002077,Outerwear,Ann Taylor,Spring,XL,Green,103.92,0.0,103.92,2024-10-24,5,,False,,Men,Rural,0.0,0.0,mid_range,low,unrated,10,24,2024
+FB001877,Tops,Gap,Spring,L,Pink,50.3,0.0,50.3,2024-08-18,23,1.3,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,18,2024
+FB001414,Accessories,Forever21,Winter,Unknown,Black,57.1,0.0,57.1,2025-08-06,28,,True,Wrong Item,Unisex,Rural,0.0,0.0,budget,medium,unrated,8,6,2025
+FB001574,Tops,Ann Taylor,Spring,S,Blue,52.46,12.2,46.06,2024-12-19,39,2.3,False,,Unisex,Rural,6.399999999999999,12.19977125428898,budget,high,low,12,19,2024
+FB000568,Accessories,Zara,Winter,Unknown,Green,41.29,26.3,30.43,2025-08-06,5,4.7,False,,Unisex,Rural,10.86,26.301767982562364,budget,low,high,8,6,2025
+FB000069,Dresses,Forever21,Spring,XS,Green,137.19,9.5,124.16,2025-04-01,17,,False,,Women,Rural,13.030000000000001,9.497776805889643,premium,medium,unrated,4,1,2025
+FB000318,Dresses,H&M,Summer,L,Purple,66.31,0.0,66.31,2025-08-06,47,3.9,False,,Women,Rural,0.0,0.0,budget,high,average,8,6,2025
+FB001731,Tops,Banana Republic,Fall,XL,Purple,63.45,12.3,55.65,2025-08-06,23,4.9,False,,Unisex,Rural,7.800000000000004,12.293144208037832,budget,medium,high,8,6,2025
+FB001878,Outerwear,Ann Taylor,Summer,XXL,Red,130.65,0.0,130.65,2025-08-06,20,2.6,False,,Men,Rural,0.0,0.0,premium,medium,low,8,6,2025
+FB001911,Outerwear,Ann Taylor,Fall,S,Beige,160.05,53.7,74.1,2025-08-06,2,3.2,True,Quality Issue,Men,Rural,85.95000000000002,53.70196813495783,premium,low,average,8,6,2025
+FB000247,Dresses,Forever21,Summer,M,Gray,80.04,50.9,39.3,2025-08-06,45,,False,,Women,Rural,40.74000000000001,50.89955022488756,mid_range,high,unrated,8,6,2025
+FB001994,Outerwear,H&M,Fall,XS,Black,183.05,0.0,183.05,2025-08-06,4,4.6,False,,Men,Urban,0.0,0.0,premium,low,high,8,6,2025
+FB001060,Tops,Forever21,Summer,L,Purple,91.6,59.5,37.1,2025-08-06,2,4.3,False,,Unisex,Rural,54.49999999999999,59.497816593886455,mid_range,low,high,8,6,2025
+FB001022,Accessories,Uniqlo,Summer,Unknown,Red,63.45,0.0,63.45,2025-08-06,4,3.9,False,,Unisex,Rural,0.0,0.0,budget,low,average,8,6,2025
+FB001520,Bottoms,Banana Republic,Spring,XL,Navy,119.33,16.0,100.24,2024-08-16,35,,False,,Unisex,Urban,19.090000000000003,15.997653565742064,premium,high,unrated,8,16,2024
+FB000977,Bottoms,Uniqlo,Fall,XXL,Navy,59.36,0.0,59.36,2025-08-06,16,,False,,Unisex,Rural,0.0,0.0,budget,medium,unrated,8,6,2025
+FB001699,Bottoms,Mango,Summer,S,Brown,105.37,19.6,84.72,2025-08-06,39,4.3,False,,Unisex,Rural,20.650000000000006,19.597608427446147,mid_range,high,high,8,6,2025
+FB001456,Tops,Ann Taylor,Winter,XXL,Beige,35.26,0.0,35.26,2025-08-06,47,2.3,False,,Unisex,Rural,0.0,0.0,budget,high,low,8,6,2025
+FB000082,Tops,Ann Taylor,Fall,M,White,113.17,19.1,91.55,2025-08-06,15,4.9,False,,Unisex,Rural,21.620000000000005,19.104002827604493,premium,medium,high,8,6,2025
+FB000187,Tops,Gap,Fall,M,Blue,92.37,35.9,59.21,2025-08-06,20,,False,,Unisex,Rural,33.160000000000004,35.89910143986143,mid_range,medium,unrated,8,6,2025
+FB000314,Tops,Zara,Winter,XXL,Beige,47.07,57.4,20.05,2025-08-06,24,1.3,True,Size Issue,Unisex,Rural,27.02,57.40386658168685,budget,medium,low,8,6,2025
+FB001942,Outerwear,Banana Republic,Winter,XS,White,138.87,0.0,138.87,2025-08-06,37,3.2,False,,Men,Urban,0.0,0.0,premium,high,average,8,6,2025
+FB000906,Bottoms,Mango,Spring,XL,Pink,107.22,37.8,66.69,2025-07-11,21,2.9,False,,Unisex,Rural,40.53,37.800783435926135,mid_range,medium,low,7,11,2025
+FB000089,Shoes,H&M,Spring,M,Blue,113.79,55.3,50.86,2024-12-29,47,4.1,False,,Unisex,Urban,62.93000000000001,55.303629492925566,premium,high,high,12,29,2024
+FB001914,Outerwear,Mango,Fall,S,Green,184.24,0.0,184.24,2025-08-06,49,4.0,False,,Men,Rural,0.0,0.0,premium,high,high,8,6,2025
+FB001862,Bottoms,H&M,Fall,S,Purple,47.66,0.0,47.66,2025-08-06,0,4.8,True,Size Issue,Unisex,Rural,0.0,0.0,budget,out_of_stock,high,8,6,2025
+FB000321,Bottoms,Mango,Fall,S,Beige,26.16,16.2,21.92,2025-08-06,13,2.3,False,,Unisex,Rural,4.239999999999998,16.207951070336385,budget,medium,low,8,6,2025
+FB001761,Accessories,Banana Republic,Spring,Unknown,Blue,66.62,0.0,66.62,2024-10-27,37,,False,,Unisex,Rural,0.0,0.0,budget,high,unrated,10,27,2024
+FB000667,Tops,H&M,Summer,L,Black,72.95,0.0,72.95,2025-08-06,27,4.8,False,,Unisex,Rural,0.0,0.0,mid_range,medium,high,8,6,2025
+FB000896,Tops,Ann Taylor,Summer,XS,Black,30.46,0.0,30.46,2025-08-06,19,1.2,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,6,2025
+FB001923,Shoes,Zara,Spring,S,Green,133.52,0.0,133.52,2024-10-04,32,,False,,Unisex,Urban,0.0,0.0,premium,high,unrated,10,4,2024
+FB000875,Dresses,Zara,Spring,M,White,94.03,56.1,41.28,2024-12-16,16,1.2,False,,Women,Rural,52.75,56.099117302988404,mid_range,medium,low,12,16,2024
+FB000811,Dresses,Ann Taylor,Fall,XL,White,63.02,0.0,63.02,2025-08-06,37,2.5,False,,Women,Rural,0.0,0.0,budget,high,low,8,6,2025
+FB001312,Bottoms,Zara,Spring,S,Gray,119.84,0.0,119.84,2024-09-27,47,1.4,False,,Unisex,Urban,0.0,0.0,premium,high,low,9,27,2024
+FB000627,Tops,Gap,Winter,S,Brown,75.0,0.0,75.0,2025-08-06,19,1.6,False,,Unisex,Rural,0.0,0.0,mid_range,medium,low,8,6,2025
+FB000329,Outerwear,Uniqlo,Summer,XS,Gray,117.45,29.5,82.8,2025-08-06,43,1.2,False,,Men,Rural,34.650000000000006,29.501915708812263,premium,high,low,8,6,2025
+FB001008,Accessories,Forever21,Fall,Unknown,Purple,75.22,25.9,55.74,2025-08-06,31,1.9,True,Color Mismatch,Unisex,Rural,19.479999999999997,25.8973677213507,mid_range,high,low,8,6,2025
+FB000172,Tops,Zara,Winter,XS,Red,92.25,0.0,92.25,2025-08-06,13,2.8,True,Damaged,Unisex,Rural,0.0,0.0,mid_range,medium,low,8,6,2025
+FB000256,Bottoms,Forever21,Fall,XXL,Black,75.66,0.0,75.66,2025-08-06,20,3.0,False,,Unisex,Rural,0.0,0.0,mid_range,medium,average,8,6,2025
+FB000295,Shoes,Banana Republic,Fall,M,Purple,96.17,36.0,61.55,2025-08-06,45,3.5,False,,Unisex,Rural,34.620000000000005,35.99875220962878,mid_range,high,average,8,6,2025
+FB000761,Bottoms,Zara,Winter,XXL,Blue,84.19,9.6,76.11,2025-08-06,45,2.1,False,,Unisex,Rural,8.079999999999998,9.597339351466918,mid_range,high,low,8,6,2025
+FB001898,Outerwear,Banana Republic,Spring,S,Gray,224.47,2.7,218.41,2025-01-27,15,3.5,False,,Men,Urban,6.060000000000002,2.699692609257363,premium,medium,average,1,27,2025
+FB000102,Dresses,Banana Republic,Winter,S,White,163.5,0.0,163.5,2025-08-06,34,4.9,False,,Women,Urban,0.0,0.0,premium,high,high,8,6,2025
+FB000605,Accessories,Uniqlo,Winter,Unknown,Black,66.6,0.0,66.6,2025-08-06,47,4.0,False,,Unisex,Rural,0.0,0.0,budget,high,high,8,6,2025
+FB000751,Dresses,Banana Republic,Winter,XL,Green,55.47,0.0,55.47,2025-08-06,18,,False,,Women,Rural,0.0,0.0,budget,medium,unrated,8,6,2025
+FB000528,Outerwear,Ann Taylor,Fall,XL,Pink,234.14,0.0,234.14,2025-08-06,40,1.7,False,,Men,Rural,0.0,0.0,premium,high,low,8,6,2025
+FB001614,Shoes,Forever21,Summer,S,Beige,114.37,43.2,64.96,2025-08-06,16,1.4,False,,Unisex,Rural,49.41000000000001,43.201888607152235,premium,medium,low,8,6,2025
+FB001366,Outerwear,Forever21,Spring,S,Green,161.25,48.4,83.2,2024-11-11,32,,False,,Men,Rural,78.05,48.4031007751938,premium,high,unrated,11,11,2024
+FB001536,Dresses,Zara,Summer,XXL,Navy,171.93,52.3,82.01,2025-08-06,28,2.2,False,,Women,Urban,89.92,52.30035479555633,premium,medium,low,8,6,2025
+FB001430,Tops,Mango,Spring,XL,Brown,75.84,0.0,75.84,2025-04-07,8,4.1,False,,Unisex,Rural,0.0,0.0,mid_range,low,high,4,7,2025
+FB000498,Bottoms,Forever21,Fall,XXL,Green,96.7,38.8,59.18,2025-08-06,46,1.7,False,,Unisex,Rural,37.52,38.80041365046536,mid_range,high,low,8,6,2025
+FB001354,Accessories,Zara,Spring,Unknown,Gray,77.68,29.9,54.45,2025-07-24,33,4.0,True,Damaged,Unisex,Rural,23.230000000000004,29.904737384140066,mid_range,high,high,7,24,2025
+FB000608,Dresses,Zara,Spring,M,Red,95.33,0.0,95.33,2025-06-07,36,,True,Quality Issue,Women,Rural,0.0,0.0,mid_range,high,unrated,6,7,2025
+FB001369,Shoes,H&M,Summer,XL,Gray,122.03,25.2,91.28,2025-08-06,21,4.7,False,,Unisex,Urban,30.75,25.198721625829712,premium,medium,high,8,6,2025
+FB000913,Outerwear,Gap,Summer,S,Black,141.83,0.0,141.83,2025-08-06,2,2.4,True,Color Mismatch,Men,Rural,0.0,0.0,premium,low,low,8,6,2025
+FB001153,Shoes,Gap,Spring,S,Gray,152.32,0.0,152.32,2025-06-09,15,,False,,Unisex,Rural,0.0,0.0,premium,medium,unrated,6,9,2025
+FB000015,Tops,Mango,Winter,M,Beige,79.66,0.0,79.66,2025-08-06,7,1.7,False,,Unisex,Rural,0.0,0.0,mid_range,low,low,8,6,2025
+FB000849,Tops,Gap,Fall,L,Blue,100.48,17.6,82.8,2025-08-06,19,,False,,Unisex,Rural,17.680000000000007,17.59554140127389,mid_range,medium,unrated,8,6,2025
+FB000994,Bottoms,Ann Taylor,Fall,Unknown,Beige,59.1,0.0,59.1,2025-08-06,47,4.6,False,,Unisex,Rural,0.0,0.0,budget,high,high,8,6,2025
+FB001522,Accessories,Mango,Winter,Unknown,Blue,69.48,0.0,69.48,2025-08-06,17,3.4,False,,Unisex,Rural,0.0,0.0,mid_range,medium,average,8,6,2025
+FB000489,Outerwear,Banana Republic,Fall,Unknown,Pink,223.69,6.3,209.6,2025-08-06,18,1.9,False,,Men,Urban,14.090000000000003,6.298895793285352,premium,medium,low,8,6,2025
+FB001447,Bottoms,Banana Republic,Fall,XS,Red,74.27,0.0,74.27,2025-08-06,6,1.3,False,,Unisex,Rural,0.0,0.0,mid_range,low,low,8,6,2025
+FB001173,Shoes,Banana Republic,Winter,M,Beige,171.48,0.0,171.48,2025-08-06,15,2.4,False,,Unisex,Urban,0.0,0.0,premium,medium,low,8,6,2025
+FB001724,Bottoms,Mango,Fall,Unknown,Gray,53.64,55.9,23.66,2025-08-06,10,2.5,False,,Unisex,Rural,29.98,55.89112602535421,budget,low,low,8,6,2025
+FB001996,Tops,Zara,Spring,XS,Purple,84.21,0.0,84.21,2025-01-15,43,3.4,False,,Unisex,Rural,0.0,0.0,mid_range,high,average,1,15,2025
+FB000194,Dresses,Gap,Winter,XL,Pink,57.53,13.0,50.05,2025-08-06,12,4.1,False,,Women,Rural,7.480000000000004,13.001912045889108,budget,medium,high,8,6,2025
+FB000202,Shoes,Zara,Summer,XL,Green,144.92,17.0,120.28,2025-08-06,32,2.0,False,,Unisex,Urban,24.639999999999986,17.00248412917471,premium,high,low,8,6,2025
+FB000503,Bottoms,Gap,Fall,XL,Navy,94.53,0.0,94.53,2025-08-06,13,2.4,False,,Unisex,Rural,0.0,0.0,mid_range,medium,low,8,6,2025
+FB000222,Tops,Zara,Summer,XXL,Gray,26.09,0.0,26.09,2025-08-06,32,4.6,True,Damaged,Unisex,Rural,0.0,0.0,budget,high,high,8,6,2025
+FB000677,Outerwear,Banana Republic,Fall,XXL,Brown,91.08,0.0,91.08,2025-08-06,47,4.9,False,,Men,Rural,0.0,0.0,mid_range,high,high,8,6,2025
+FB000366,Accessories,Uniqlo,Fall,Unknown,Green,41.7,0.0,41.7,2025-08-06,18,3.2,False,,Unisex,Rural,0.0,0.0,budget,medium,average,8,6,2025
+FB000332,Dresses,Forever21,Fall,XS,Navy,80.4,52.1,38.51,2025-08-06,7,1.2,False,,Women,Rural,41.89000000000001,52.10199004975125,mid_range,low,low,8,6,2025
+FB001894,Shoes,H&M,Winter,XL,Blue,194.4,16.2,162.91,2025-08-06,36,1.5,False,,Unisex,Urban,31.49000000000001,16.198559670781897,premium,high,low,8,6,2025
+FB001167,Bottoms,Mango,Winter,XXL,Red,93.59,0.0,93.59,2025-08-06,38,1.9,False,,Unisex,Rural,0.0,0.0,mid_range,high,low,8,6,2025
+FB001370,Shoes,Mango,Spring,S,Brown,109.15,0.0,109.15,2024-11-11,11,,False,,Unisex,Rural,0.0,0.0,mid_range,medium,unrated,11,11,2024
+FB000958,Bottoms,Mango,Summer,XXL,White,28.9,0.0,28.9,2025-08-06,5,4.6,False,,Unisex,Rural,0.0,0.0,budget,low,high,8,6,2025
+FB000522,Bottoms,H&M,Fall,L,Blue,39.05,0.0,39.05,2025-08-06,10,3.5,False,,Unisex,Rural,0.0,0.0,budget,low,average,8,6,2025
+FB000024,Dresses,Banana Republic,Summer,XL,Green,91.36,0.0,91.36,2025-08-06,37,1.2,True,Size Issue,Women,Rural,0.0,0.0,mid_range,high,low,8,6,2025
+FB000554,Bottoms,Gap,Summer,XL,Navy,86.46,49.5,43.66,2025-08-06,19,4.3,False,,Unisex,Rural,42.8,49.50266018968309,mid_range,medium,high,8,6,2025
+FB000265,Bottoms,Zara,Fall,XXL,Blue,108.24,0.0,108.24,2025-08-06,8,2.3,False,,Unisex,Urban,0.0,0.0,mid_range,low,low,8,6,2025
+FB000081,Tops,Banana Republic,Spring,S,Navy,78.16,19.1,63.23,2025-07-25,23,,False,,Unisex,Rural,14.93,19.101842374616172,mid_range,medium,unrated,7,25,2025
+FB001988,Shoes,Ann Taylor,Winter,M,Green,150.65,8.9,137.24,2025-08-06,43,3.4,False,,Unisex,Rural,13.409999999999997,8.901427149020906,premium,high,average,8,6,2025
+FB000982,Outerwear,Banana Republic,Fall,L,Black,104.18,0.0,104.18,2025-08-06,12,5.0,False,,Men,Urban,0.0,0.0,mid_range,medium,high,8,6,2025
+FB000434,Shoes,Zara,Winter,XS,Green,135.39,0.0,135.39,2025-08-06,26,3.9,False,,Unisex,Urban,0.0,0.0,premium,medium,average,8,6,2025
+FB001543,Bottoms,Forever21,Fall,S,Brown,47.22,0.0,47.22,2025-08-06,19,1.9,False,,Unisex,Rural,0.0,0.0,budget,medium,low,8,6,2025
+FB001324,Bottoms,Uniqlo,Fall,XS,Green,71.74,0.0,71.74,2025-08-06,16,,False,,Unisex,Rural,0.0,0.0,mid_range,medium,unrated,8,6,2025
+FB001388,Bottoms,Forever21,Winter,L,Brown,41.83,44.1,23.38,2025-08-06,6,2.4,False,,Unisex,Rural,18.45,44.107100167344015,budget,low,low,8,6,2025
+FB001718,Bottoms,Ann Taylor,Summer,M,Red,109.36,0.0,109.36,2025-08-06,24,1.7,False,,Unisex,Rural,0.0,0.0,mid_range,medium,low,8,6,2025
+FB000920,Accessories,Ann Taylor,Summer,Unknown,White,52.99,59.1,21.67,2025-08-06,50,3.4,True,Size Issue,Unisex,Rural,31.32,59.10549160218909,budget,high,average,8,6,2025
+FB000563,Bottoms,Forever21,Winter,L,Navy,48.42,0.0,48.42,2025-08-06,6,4.3,False,,Unisex,Rural,0.0,0.0,budget,low,high,8,6,2025
+FB001146,Outerwear,Gap,Winter,M,Brown,88.87,0.0,88.87,2025-08-06,27,2.4,False,,Men,Rural,0.0,0.0,mid_range,medium,low,8,6,2025
+FB001936,Outerwear,Banana Republic,Fall,S,Pink,167.31,50.7,82.48,2025-08-06,9,3.2,False,,Men,Urban,84.83,50.70228916382762,premium,low,average,8,6,2025
+FB001290,Outerwear,H&M,Summer,XS,Navy,229.8,0.0,229.8,2025-08-06,46,3.6,False,,Men,Urban,0.0,0.0,premium,high,average,8,6,2025
+FB000934,Outerwear,Uniqlo,Fall,XXL,Pink,87.95,13.3,76.25,2025-08-06,4,4.5,False,,Men,Rural,11.700000000000003,13.303013075611144,mid_range,low,high,8,6,2025
+FB000892,Accessories,Forever21,Spring,Unknown,Brown,64.56,43.0,36.8,2024-08-06,36,3.9,False,,Unisex,Rural,27.760000000000005,42.99876084262702,budget,high,average,8,6,2024
+FB001963,Dresses,Mango,Summer,XXL,Beige,87.82,0.0,87.82,2025-08-06,24,4.2,False,,Women,Rural,0.0,0.0,mid_range,medium,high,8,6,2025
+FB000588,Bottoms,Forever21,Winter,M,Red,73.59,16.6,61.37,2025-08-06,34,4.0,False,,Unisex,Rural,12.220000000000006,16.605517053947555,mid_range,high,high,8,6,2025
+FB001281,Shoes,Ann Taylor,Winter,XS,Purple,137.83,0.0,137.83,2025-08-06,32,3.4,True,Changed Mind,Unisex,Rural,0.0,0.0,premium,high,average,8,6,2025

@@ -1,0 +1,52 @@
+{% extends "wizard_base.html" %}
+{% block title %}AI Fashion Stylist | Personalized Fashion Recommendations{% endblock %}
+{% block body %}
+<section class="card">
+  <header class="hero">
+    <p class="eyebrow">MSc Applied Data Science · Demonstration project</p>
+    <h1>Fashion technology, made explainable.</h1>
+    <p>Hybrid Multimodal Context-Aware Personalized Fashion Recommendation System Using Machine Learning and Computer Vision</p>
+  </header>
+  <div class="content">
+    <div class="info-grid">
+      <article class="info-card">
+        <h3>Problem and objective</h3>
+        <p>A category prediction followed by arbitrary product selection offers limited personalization. This demonstration ranks available catalog items against supported profile and context inputs and exposes why an item was ranked.</p>
+      </article>
+      <article class="info-card">
+        <h3>Recommendation engine</h3>
+        <p>The application uses deterministic content-based scoring with product category, season, gender, location, color, brand, rating, discount, stock and supported profile preferences. The score is a relevance score, not a probability.</p>
+      </article>
+      <article class="info-card">
+        <h3>Personalization and context</h3>
+        <p>Supported profile and fashion preferences contribute to product ranking. Open-Meteo current weather may adjust ranking; if lookup fails, recommendations can continue with profile and season inputs.</p>
+      </article>
+      <article class="info-card">
+        <h3>Computer vision</h3>
+        <p>Optional OpenCV and MediaPipe Pose processing estimates limited image-based proportions and an experimental styling category. It is not a validated classifier or an objective or medical body-shape determination; no confidence score is produced.</p>
+      </article>
+      <article class="info-card">
+        <h3>Machine learning and evaluation</h3>
+        <p>A Random Forest category classifier is retained as an evaluated baseline. The deployed recommendation path is the content-based ranker. Offline ranking metrics use held-out catalog proxy relevance because the dataset has no user-item interactions.</p>
+        <p style="margin-top:10px"><a href="{{ url_for('evaluation_page') }}">View the generated evaluation results</a></p>
+      </article>
+      <article class="info-card">
+        <h3>Implementation</h3>
+        <p>Python, Flask, Pandas, NumPy, scikit-learn, SQLite, OpenCV, MediaPipe Pose and Matplotlib support the implemented workflow and evaluation artifacts.</p>
+      </article>
+      <article class="info-card">
+        <h3>Data and privacy limitations</h3>
+        <p>The catalog does not provide product photos, fabric-weather properties, or user interaction history. Uploaded images are processed in memory; the image is not retained in the workflow store. No login is required.</p>
+      </article>
+      <article class="info-card">
+        <h3>Current scope</h3>
+        <p>Age and occasion are not collected because they are not supported recommendation inputs. Evaluation results do not establish user satisfaction or the effectiveness of weather and body-shape adjustments.</p>
+      </article>
+    </div>
+    <div class="actions">
+      <a class="button secondary" href="{{ url_for('evaluation_page') }}">Review evaluation</a>
+      <a class="button primary" href="{{ url_for('personal_details') }}">Create a fashion profile</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

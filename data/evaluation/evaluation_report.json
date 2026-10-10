@@ -1,0 +1,89 @@
+{
+  "evaluation_type": "simulated_catalog_proxy",
+  "real_user_interaction_data_available": false,
+  "relevance_data_fabricated": false,
+  "source_rows": 2176,
+  "train_rows": 1740,
+  "test_pseudo_profile_rows": 436,
+  "evaluated_profiles": 436,
+  "skipped_profiles": 0,
+  "train_fraction": 0.8,
+  "test_fraction": 0.2,
+  "random_state": 42,
+  "stratified_by": "category",
+  "train_test_product_id_overlap": 0,
+  "candidate_count": 1705,
+  "k_values": [
+    5,
+    10
+  ],
+  "relevance_threshold": 4,
+  "graded_relevance_points": {
+    "category": 2,
+    "season": 1,
+    "gender_compatibility": 1,
+    "location": 1,
+    "color": 1,
+    "brand": 1,
+    "size": 1
+  },
+  "gender_compatibility": "Exact gender match; Unisex candidates also match Men/Women pseudo-profiles",
+  "aggregation": "Macro average over pseudo-profiles; F1 computed per profile",
+  "baseline": "Deterministic random ranking among in-stock products matching pseudo-profile category",
+  "improved_method": "Content-based ranking with category, season, gender, location, color, brand, and size preferences",
+  "metrics": [
+    "Precision@K",
+    "Recall@K",
+    "F1@K",
+    "NDCG@K",
+    "Hit Rate@K"
+  ],
+  "comparison": [
+    {
+      "method": "Random/category baseline",
+      "k": 5,
+      "profiles": 436,
+      "precision_at_k": 0.8674311926605505,
+      "recall_at_k": 0.013635104392355612,
+      "f1_at_k": 0.026823632880824455,
+      "ndcg_at_k": 0.24228244988406492,
+      "hit_rate_at_k": 0.9977064220183486
+    },
+    {
+      "method": "Content-based ranking",
+      "k": 5,
+      "profiles": 436,
+      "precision_at_k": 1.0,
+      "recall_at_k": 0.016348197560028678,
+      "f1_at_k": 0.03213392258237491,
+      "ndcg_at_k": 0.9830204218913411,
+      "hit_rate_at_k": 1.0
+    },
+    {
+      "method": "Random/category baseline",
+      "k": 10,
+      "profiles": 436,
+      "precision_at_k": 0.8644495412844038,
+      "recall_at_k": 0.027139489221917598,
+      "f1_at_k": 0.05253509676418337,
+      "ndcg_at_k": 0.2723290182969176,
+      "hit_rate_at_k": 1.0
+    },
+    {
+      "method": "Content-based ranking",
+      "k": 10,
+      "profiles": 436,
+      "precision_at_k": 1.0,
+      "recall_at_k": 0.032696395120057356,
+      "f1_at_k": 0.06318390537775093,
+      "ndcg_at_k": 0.9884727455765421,
+      "hit_rate_at_k": 1.0
+    }
+  ],
+  "limitations": [
+    "The source data contains no customer identifiers, recommendation impressions, clicks, or user-item interactions.",
+    "Pseudo-profiles are held-out product rows and do not represent actual users.",
+    "Proxy relevance is derived from matching catalog attributes, so the evaluation measures attribute retrieval, not user satisfaction.",
+    "The relevance rule overlaps the preference fields used by the content recommender; results must not be interpreted as independent evidence of real-world effectiveness."
+  ]
+}

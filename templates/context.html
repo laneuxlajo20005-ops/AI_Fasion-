@@ -1,0 +1,42 @@
+{% extends "wizard_base.html" %}
+{% block title %}AI Fashion Stylist | Personalized Fashion Recommendations{% endblock %}
+{% block body %}
+<section class="card">
+  <header class="hero">
+    <p class="eyebrow">Live information when available</p>
+    <h1>Your context, considered.</h1>
+    <p>Recommendations can be adjusted according to the current weather for your selected city and your chosen season.</p>
+  </header>
+  <div class="content">
+    <h2 class="section-title">Current context</h2>
+    {% if weather_context %}
+    <div class="summary-grid">
+      <div class="summary-item"><div class="summary-label">Location</div><div class="summary-value">{{ weather_context.city }}{% if weather_context.country %}, {{ weather_context.country }}{% endif %}</div></div>
+      <div class="summary-item"><div class="summary-label">Temperature</div><div class="summary-value">{{ '%.1f'|format(weather_context.temperature_c) }} °C</div></div>
+      <div class="summary-item"><div class="summary-label">Humidity</div><div class="summary-value">{{ weather_context.humidity_percent }}%</div></div>
+      <div class="summary-item"><div class="summary-label">Weather condition</div><div class="summary-value">{{ weather_context.weather_condition }}</div></div>
+      <div class="summary-item"><div class="summary-label">Selected season</div><div class="summary-value">{{ preferences.get('season') or 'Not specified' }}</div></div>
+      <div class="summary-item"><div class="summary-label">Weather source</div><div class="summary-value">Open-Meteo{% if weather_cached %} · cached{% endif %}</div></div>
+    </div>
+    <div class="notice" role="note" style="margin-top:16px">Weather can adjust the recommendation score using the engine's documented catalog proxies. Fabric warmth and water resistance are not claimed because those attributes are absent from the catalog.</div>
+    {% else %}
+    <div class="weather-box" role="status">
+      <strong>Weather information is currently unavailable.</strong><br>
+      {{ weather_message or 'Recommendations can still be generated using your profile and selected preferences.' }}
+      {% if weather_checked %}<p class="hint">Recommendations can still use your profile, selected season and other preferences.</p>{% endif %}
+    </div>
+    {% endif %}
+    {% if personal %}
+    <p class="section-hint" style="margin-top:18px">Profile location: {{ personal.get('city') }}{% if personal.get('catalog_location') %} · {{ personal.get('catalog_location') }} catalog preference{% endif %}</p>
+    {% endif %}
+    <div class="actions">
+      <a class="button secondary" href="{{ url_for('personal_details') }}">Review profile</a>
+      {% if personal and preferences %}
+      <a class="button primary" href="{{ url_for('ai_analysis') }}">View recommendation analysis</a>
+      {% else %}
+      <a class="button primary" href="{{ url_for('personal_details') }}">Set up your profile</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}
